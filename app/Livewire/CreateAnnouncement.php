@@ -2,12 +2,20 @@
 
 namespace App\Livewire;
 
-use App\Models\Announcement;
+use App\Models\User;
 use Livewire\Component;
+use App\Models\Category;
+use App\Models\Announcement;
 use Livewire\Attributes\Validate;
+use Illuminate\Support\Facades\Auth;
 
 class CreateAnnouncement extends Component
 {
+    
+    
+    
+    #[Validate('required' , message:'Questo campo è obbligatorio')]
+    public $category;
     
     #[Validate('min:3', message: 'Questo campo deve essere di almeno 3 caratteri')]
     #[Validate('required', message: 'Questo campo è obbligatorio')]
@@ -22,17 +30,17 @@ class CreateAnnouncement extends Component
     public $description;
     
     public function store(){
+        $category=Category::find($this->category);
         
-        $this->validate();
-        
-        Announcement::create([
+        $announcement=$category->announcements()->create([
             'title' => $this->title,
             'description' => $this->description,
             'price' => $this->price,
-
             
         ]);
-        
+       
+      
+        $this->validate();
         $this->cleanForm();
         
         session()->flash('message','Annuncio inserito correttamente');
@@ -42,6 +50,7 @@ class CreateAnnouncement extends Component
         $this->title = "";
         $this->description = "";
         $this->price = "";
+        $this->category ="";
     }
     
     
