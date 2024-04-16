@@ -30,6 +30,8 @@
                         <a class="nav-link" href="{{route('create')}}">crea un annuncio</a>
                     </li>
                     
+                   
+                    
                     
                     
                     <li class="nav-item">
@@ -50,6 +52,17 @@
                     @guest
                 </li>
                 <a class="nav-link" href="{{route('register')}}">registrati</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Le nostre Categorie
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    @foreach($categories as $category)
+
+                    <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
+                    @endforeach
+                </ul>
             </li>
             @endguest
             
