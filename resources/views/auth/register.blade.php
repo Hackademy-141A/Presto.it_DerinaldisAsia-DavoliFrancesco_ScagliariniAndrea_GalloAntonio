@@ -1,4 +1,5 @@
 <x-layout>
+    <div style="height: 60px"></div>
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
