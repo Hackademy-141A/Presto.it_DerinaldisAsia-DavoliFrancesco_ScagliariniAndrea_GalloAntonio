@@ -1,16 +1,20 @@
-<x-layout>
-   
-    
+
+<x-TopWelcome>
         
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-        </x-layout>
+</x-TopWelcome>
+<x-layout>
+        
+          
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+</x-layout>
