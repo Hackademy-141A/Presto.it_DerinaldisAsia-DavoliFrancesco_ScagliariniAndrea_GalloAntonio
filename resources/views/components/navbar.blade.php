@@ -31,7 +31,6 @@
             <li class="nav-item">
            <p class="nav-link"> Ciao {{ Auth::user()->name ?? 'utente' }}</p>
         </li>
-<<<<<<< HEAD
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
@@ -62,7 +61,6 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
     </form>
-=======
             @guest
             <ul class="nav d-flex justify-content-end">
             <li><a class="nav-item text-info" href="{{route('login')}}">Accedi</a></li>
@@ -81,7 +79,6 @@
     </li>
 </ul>
 
->>>>>>> 11ff76672e6772ec823d9be946e88b5b40bc69ba
 </div>
 </div>
 </nav>
