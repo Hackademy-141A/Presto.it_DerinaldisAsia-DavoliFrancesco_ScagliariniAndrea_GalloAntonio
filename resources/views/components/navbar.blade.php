@@ -40,14 +40,17 @@
                     
                     <li class="nav-item">
                         <p class="nav-link">Benvenuto ospite </p>
-                    </li>                  
-                                    
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link glow-on-hover text-center py-auto" href="{{route('login')}}">login</a>
+                    </li>
+                    
                     
                     @endauth
                     @guest
                 </li>
-                {{-- <a class="nav-link" href="{{route('register')}}">registrati</a> --}}
-                <a href="{{route('register')}}" class="glow-on-hover text-center py-auto" >Registrati</a><a href="{{route('login')}}" class="glow-on-hover text-center py-auto" >Login</a>
+                <a class="nav-link glow-on-hover text-center py-auto" href="{{route('register')}}">registrati</a>
             </li>
             
             @endguest
@@ -64,14 +67,15 @@
             </li>
             @auth
               {{-- Form di logout con method post --}}
-                <form method="POST" action="{{ route('logout') }}">
-                   @csrf
-                     <li>
-                       <button type="submit" class="btn  w-100"><i class="fa-solid fa-right-to-bracket" style="color: #cf2a2a;"></i></button>
-
-                    </li>
-                </form>
+              <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <li>
+                    <button type="submit" class="btn btn-danger w-100"><i class="fa-solid fa-right-to-bracket" style="color: #cf2a2a;"></button>
+                </li>
+            </form>
             @endauth
             
         </nav>
+        
+        
         
