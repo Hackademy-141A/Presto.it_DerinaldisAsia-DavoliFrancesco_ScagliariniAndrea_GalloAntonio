@@ -21,3 +21,5 @@ Route::get('/categoria/{category}',[PublicController::class,'categoryShow'])->na
 Route::get('/dettaglio/annuncio/{announcement}',[AnnouncementController::class,'showAnnouncement'])->name('announcements.show');
 Route::get('/annunci/create', [AnnouncementController::class,'create'])->middleware('auth')->name('create');
 Route::get('/tutti/annunci',[AnnouncementController::class,'index'])->name('announcements.index');
+Route::get('/profile', [PublicController::class, 'index'])->name('profile.profile');
+Route::delete('/profile/delete',[PublicController::class, 'destroy'])->name('profile.delete');

@@ -29,12 +29,12 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <h3>{{$announcement->title}}</h3>
-                        <p class="card-text">{{$announcement->price}}</p>
-                        <p class="card-text">Pubblicato da:{{$announcement->category->name}}</p>
+                        <h3> Titolo: {{$announcement->title}}</h3>
+                        <p class="card-text">Prezzo: {{$announcement->price}}$</p>
+                        <p class="card-text">Categoria: {{$announcement->category->name}}</p>
                         <p class="card-text">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}}</p>
                         <p class="card-text">Pubblicato da:{{$announcement->user->name}}</p>
-                        <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="btn btn-primary">Vai al dettaglio</a>
+                        <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="btn btn-primary">Vai alle categorie</a>
                         <a href="{{route('home')}}" class="btn btn-danger">Torna indietro</a>
                     </div>
                 </div>
