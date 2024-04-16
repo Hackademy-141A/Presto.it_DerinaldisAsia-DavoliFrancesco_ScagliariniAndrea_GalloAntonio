@@ -9,10 +9,20 @@
     width: 100px;
 }
 
+.mynavbar {
+    background-color: var(--root);
+}
+
+.body {
+    background-image:url(/public/img/presto_sfondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 .glow-on-hover {
     width: 120px;
-    height: 50px;
+    height: 30px;
     border: none;
     outline: none;
     color: #fff;

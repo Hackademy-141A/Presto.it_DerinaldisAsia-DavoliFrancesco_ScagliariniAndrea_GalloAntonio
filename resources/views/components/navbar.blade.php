@@ -1,12 +1,12 @@
 
 <!-- effetto sticky navbar -->
-<div class="container-fluid container-navbar">
+<div class="container container-navbar">
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-xl bg-navbar" aria-label="My Navbar">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-xl bg-navbar mynavbar" aria-label="My Navbar">
+        <div class="container">
             <a class="navbar-brand" href="#">
                 <!-- inseriamo il logo -->
-                <img class="image" src="/img/logo_presto.jpg" alt="logo del sito" id="logo">
+                <img id="logo"class="image" src="/img/logo_presto.jpg" alt="logo del sito" id="logo">
             </a>
             {{-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <!-- inseriamo una nostra icona -->
@@ -14,17 +14,18 @@
             </button> --}}
 
    
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
+                    <a id="list" class="nav-link" aria-current="page" href="{{route('home')}}">Home</a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('announcements.index')}}">i nostri annunci</a>
+                    <a id="list" class="nav-link " href="{{route('announcements.index')}}">i nostri annunci</a>
                 </li>
                 
                 
@@ -33,7 +34,7 @@
                 <li>
                    
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('create')}}">crea un annuncio</a>
+                        <a id="list" class="nav-link " href="{{route('create')}}">crea un annuncio</a>
                     </li>
                     
                    
@@ -42,34 +43,23 @@
                     
                     
                     <li class="nav-item">
-                        <p class="nav-link">Benvenuto {{ Auth::user()->name }}</p>
+                        <p id="list" class="nav-link ">Benvenuto {{ Auth::user()->name }}</p>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('profile.profile')}}">Vai al tuo profilo</a>
+                        <a id="list" class="nav-link " href="{{route('profile.profile')}}">Vai al profilo</a>
                     </li>
                     
                    
-                    @else
                     
-                    <li class="nav-item">
-                        <p class="nav-link">Benvenuto ospite </p>
-                    </li>
                     
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('login')}}">login</a>
-                    </li>
+                   
                     
                     
                     @endauth
-                    @guest
-                </li>
-                {{-- <a class="nav-link" href="{{route('register')}}">registrati</a> --}}
-         
-            
-            @endguest
+                 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a id="list"  class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Le nostre Categorie
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -86,7 +76,7 @@
             
            
           
-            <div class="buttonDad d-flex justify-content-end align-items-end">
+            <div class="buttonDad d-flex ">
                 <a href="{{route('register')}}" class="glow-on-hover" type="button">Registrati</a>
                 <a href="{{route('login')}}" class="glow-on-hover" type="button">Accedi</a>
             
@@ -95,17 +85,15 @@
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     
-                   <button type="submit" class="button display-2 btn btn-outline-primary"><i class="fa-solid fa-right-to-bracket fa-2xs" style="color: #c81933;"></i></button>
+                   <button type="submit" class="button display-2 btn btn-outline-primary"><i class="fa-solid fa-right-to-bracket fa-sm" style="color: #c81933;"></i></button>
                     
                 </form>
-                {{-- <button href="{{route('login')}}" class="fa-solid fa-right-to-bracket"></button> --}}
+                
                 
                 
             </div>
             
-            <!-- <form role="search">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-            </form> -->
+          
         </div>
     </div>
 </nav>
@@ -114,4 +102,16 @@
 
 
 
+{{--             
+              <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <li>
+                    <button type="submit" class="btn btn-danger w-100"><i class="fa-solid fa-right-to-bracket" style="color: #cf2a2a;"></button>
+                </li>
+            </form>
+            @endauth
             
+        </nav> --}}
+        
+        
+        
