@@ -9,10 +9,13 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             
             
-            @auth
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('announcements.index')}}">I nostri articoli</a>
+            </li>
+            @auth
             <li class="nav-item">
                 <a class="nav-link" href="{{route('create')}}">Inserisci un articolo</a>
             </li>               
@@ -20,9 +23,7 @@
             @endauth
             
             
-            <li class="nav-item">
-                <a class="nav-link" href="">I nostri articoli</a>
-            </li>
+           
             
             
             
@@ -47,6 +48,28 @@
                 @endguest
             </ul>
         </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Categorie
+           
+        </a>
+       
+          
+            
+               <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                 @foreach ($categories as $category)
+                 <li><a class="dropdown-item" href="{{route('categoryShow',compact('category'))}}">{{$category->name}}</a></li>
+                 
+                 @endforeach
+               </ul>
+          
+           
+           
+           
+           
+        
+    </li>
         {{-- <li class="nav-item">
             <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li> --}}

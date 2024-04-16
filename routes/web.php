@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\PublicController;
+use App\Models\Announcement;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,4 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PublicController::class,'home'])->name('home');
+Route::get('/categoria/{category}',[PublicController::class,'categoryShow'])->name('categoryShow');
+Route::get('/dettaglio/annuncio/{announcement}',[AnnouncementController::class,'showAnnouncement'])->name('announcements.show');
 Route::get('/annunci/create', [AnnouncementController::class,'create'])->middleware('auth')->name('create');
+Route::get('/tutti/annunci',[AnnouncementController::class,'index'])->name('announcements.index');
