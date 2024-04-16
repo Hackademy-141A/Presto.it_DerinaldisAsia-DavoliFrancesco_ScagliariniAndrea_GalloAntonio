@@ -30,7 +30,7 @@
                     </div>
                     <div class="card-body">
                         <h3> Titolo: {{$announcement->title}}</h3>
-                        <p class="card-text">{{$announcement->price}}</p>
+                        <p class="card-text">Prezzo: {{$announcement->price}}$</p>
                         <p class="card-text">Categoria: {{$announcement->category->name}}</p>
                         <p class="card-text">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}}</p>
                         <p class="card-text">Pubblicato da:{{$announcement->user->name}}</p>

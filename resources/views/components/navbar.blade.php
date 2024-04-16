@@ -1,6 +1,5 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -18,18 +17,12 @@
                 @auth
                 
                 <li>
-                    {{-- Form di logout con method post --}}
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <li>
-                            <button type="submit" class="btn btn-danger w-100">Logout</button>
-                        </li>
-                    </form>
-                    
+                   
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('create')}}">crea un annuncio</a>
                     </li>
                     
+                   
                     
                     
                     
@@ -37,6 +30,12 @@
                     <li class="nav-item">
                         <p class="nav-link">Benvenuto {{ Auth::user()->name }}</p>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('profile.profile')}}">Vai al tuo profilo</a>
+                    </li>
+                    
+                   
                     @else
                     
                     <li class="nav-item">
@@ -66,6 +65,15 @@
                     @endforeach
                 </ul>
             </li>
+            @auth
+              {{-- Form di logout con method post --}}
+              <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <li>
+                    <button type="submit" class="btn btn-danger w-100">Logout</button>
+                </li>
+            </form>
+            @endauth
             
         </nav>
         
