@@ -12,7 +12,7 @@
                                         <p class="card-text">{{$announcement->price}}</p>
                                         <p class="card-text">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}}</p>
                                         <p class="card-text">Pubblicato da:{{$announcement->user->name}}</p>
-                                        <a href="" class="btn btn-danger">Vai al dettaglio</a>
+                                        <a href="{{route('announcements.show' , compact('announcement'))}}" class="btn btn-danger">Vai al dettaglio</a>
                                 </div>
                         </div>
                         </div>
