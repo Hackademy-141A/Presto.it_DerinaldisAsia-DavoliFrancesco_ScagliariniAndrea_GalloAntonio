@@ -3,10 +3,11 @@
 namespace App\Providers;
 
 use App\Models\Category;
+use Nette\Utils\Paginator;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\View as FacadesView;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View as FacadesView;
 
 
 class AppServiceProvider extends ServiceProvider
@@ -28,5 +29,7 @@ class AppServiceProvider extends ServiceProvider
             
             FacadesView::share('categories', Category::all());
         }
+
+      
     }
 }
