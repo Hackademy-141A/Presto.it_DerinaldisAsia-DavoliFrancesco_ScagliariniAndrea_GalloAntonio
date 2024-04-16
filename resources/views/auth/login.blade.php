@@ -1,41 +1,44 @@
 <x-layout>
-    <div style="height: 60px"></div>
-    
-    @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif
     <div class="container">
-        <div class="row">
-            <div class="col-7">
-                
-                
-                <form method="POST" action="{{route('login')}}">
-                    
+        <div class="row  d-flex justify-content-center text-center">
+            <div class="col-md-8">
+                <div style="height: 200px"></div>
+                <h2>Accedi</h2>
+
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+
+                <form method="POST" action="{{ route('login') }}">
                     @csrf
-                    
+
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
                         <input name="email" type="email" class="form-control" id="email">
                     </div>
-                    
+
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
-                        <input name="password" type="password" class="form-control" id="password">
+                        <div class="input-group">
+                            <input name="password" type="password" class="form-control" id="password">
+                            <button class="btn btn-outline-dark" type="button" onclick="togglePassword()">Mostra/Nascondi Password</button>
+                        </div>
                     </div>
-                    <input type="checkbox" onclick="myFunction()">Mostra/Nascondi Password
+                    
                     <button type="submit" class="btn btn-primary">Accedi</button>
                 </form>
             </div>
         </div>
     </div>
+
     <script>
-        function myFunction() {
+        function togglePassword() {
             var x = document.getElementById("password");
             if (x.type === "password") {
                 x.type = "text";

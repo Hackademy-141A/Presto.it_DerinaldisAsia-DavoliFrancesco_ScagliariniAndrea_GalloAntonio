@@ -5,13 +5,20 @@
 }
 
 .image {
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 60px;
+    
 }
 
 .mynavbar {
     background-color: var(--root);
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Assicura che la navbar sia sopra il contenuto */   
+    padding: 10px 0; /* Spaziatura interna */
 }
+
+
 
 .body {
     background-image:url(/public/img/presto_sfondo.jpg);
@@ -26,7 +33,7 @@
     border: none;
     outline: none;
     color: #fff;
-    background: #111;
+    background: #410909;
     cursor: pointer;
     position: relative;
     z-index: 0;
@@ -50,7 +57,7 @@
     filter: blur(5px);
     width: calc(100% + 4px);
     height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
+    animation: glowing 10s linear infinite;
     opacity: 0;
     transition: opacity .3s ease-in-out;
     border-radius: 10px;
@@ -74,7 +81,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #111;
+    background: #3a0808;
     left: 0;
     top: 0;
     border-radius: 10px;
