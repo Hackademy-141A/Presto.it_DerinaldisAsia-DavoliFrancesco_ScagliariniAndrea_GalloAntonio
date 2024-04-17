@@ -22,6 +22,21 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('create') }}">Crea un annuncio</a>
                 </li>
+                <li>
+                    @if (Auth::user()->is_revisor)
+                    <li class="nav-item">
+                        <a href="{{rout('revisor.index')}}" class="nav-link"></a>
+                        <span>
+                            <span>
+                                {{App\Models\Announcement::toBeRevisionedCount()}}
+                            </span>
+
+                        </span>
+                    
+                    </li>
+                        
+                    @endif
+                </li>
                 
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('profile.profile') }}">Vai al profilo</a>

@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\AnnouncementController;
-use App\Http\Controllers\PublicController;
 use App\Models\Announcement;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\AnnouncementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,4 @@ Route::get('/annunci/create', [AnnouncementController::class,'create'])->middlew
 Route::get('/tutti/annunci',[AnnouncementController::class,'index'])->name('announcements.index');
 Route::get('/profile', [PublicController::class, 'index'])->name('profile.profile');
 Route::delete('/profile/delete',[PublicController::class, 'destroy'])->name('profile.delete');
+Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.index');
