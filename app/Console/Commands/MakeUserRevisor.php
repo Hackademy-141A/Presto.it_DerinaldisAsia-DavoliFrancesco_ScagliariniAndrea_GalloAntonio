@@ -21,6 +21,11 @@ class MakeUserRevisor extends Command
      */
     protected $description = 'Rendi un utente revisore';
 
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
     /**
      * Execute the console command.
      */

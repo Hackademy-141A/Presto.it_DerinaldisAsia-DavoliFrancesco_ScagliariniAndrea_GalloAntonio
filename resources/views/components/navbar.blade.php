@@ -23,19 +23,7 @@
                     <a class="nav-link" href="{{ route('create') }}">Crea un annuncio</a>
                 </li>
                 <li>
-                    @if (Auth::user()->is_revisor)
-                    <li class="nav-item">
-                        <a href="{{rout('revisor.index')}}" class="nav-link"></a>
-                        <span>
-                            <span>
-                                {{App\Models\Announcement::toBeRevisionedCount()}}
-                            </span>
-
-                        </span>
-                    
-                    </li>
-                        
-                    @endif
+                 
                 </li>
                 
                 <li class="nav-item">
@@ -55,6 +43,8 @@
                     </ul>
                 </li>
             </ul>
+          
+                
             
             
             
@@ -67,6 +57,8 @@
                 <a href="{{ route('login') }}" class="glow-on-hover btn btn-outline-primary "
                 type="button">Accedi</a>
             </div>
+         
+            
             @endguest
             
             @auth
@@ -83,7 +75,22 @@
                     class="fa-solid fa-right-to-bracket fa-sm" style="color: #c81933;"></i>
                 </button>
             </form>
+
+            @if (Auth::user()->is_revisor)
+         
+            <li>
+                <a class="btn-info w-100" href="{{route('revisor.index')}}">Revisore
+                <span class="bg-danger">
+                    {{App\Models\Announcement::toBeRevisionedCount()}}
+                    <span class="visually-hidden">Articoli non revisionati</span>
+                    </span>
+                </a>
+
+            </li>
+            
+            @endif
             @endauth
+         
         </div>
         
     </div>
