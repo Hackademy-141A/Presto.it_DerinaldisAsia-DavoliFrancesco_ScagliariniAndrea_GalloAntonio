@@ -43,7 +43,7 @@ class PublicController extends Controller
             $announcement->update([
                 'user_id' => NULL,
             ]);
-        }
+        };
 
 
 
