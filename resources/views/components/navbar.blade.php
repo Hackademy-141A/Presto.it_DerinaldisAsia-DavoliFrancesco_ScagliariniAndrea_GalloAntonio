@@ -22,11 +22,26 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('create') }}">Crea un annuncio</a>
                 </li>
+                <li>
+                    @if (Auth::user()->is_revisor)
+                    <li class="nav-item">
+                        <a href="{{rout('revisor.index')}}" class="nav-link"></a>
+                        <span>
+                            <span>
+                                {{App\Models\Announcement::toBeRevisionedCount()}}
+                            </span>
+
+                        </span>
+                    
+                    </li>
+                        
+                    @endif
+                </li>
                 
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('profile.profile') }}">Vai al profilo</a>
                 </li>
-              
+                
                 @endauth
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -42,33 +57,36 @@
             </ul>
             
             
+            
+            
+            
             @guest
-            
-            
-            
             <div class="buttonDad d-flex ">
                 <a href="{{ route('register') }}" class="glow-on-hover btn btn-outline-primary  "
                 type="button">Registrati</a>
                 <a href="{{ route('login') }}" class="glow-on-hover btn btn-outline-primary "
                 type="button">Accedi</a>
-                @endguest
-                @auth
-            </form>
-            <div class="mt-3">
-            <ul class="nav-item">
-                <a class="nav-link" href="">Benvenuto {{ Auth::user()->name }}</a>
-            </ul>
-        </div>
-                
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                    <button type="submit" class=" mx-3 button display-2 btn btn-outline-primary"><i
-                        class="fa-solid fa-right-to-bracket fa-sm" style="color: #c81933;"></i></button>
-                   
-                    @endauth
-                </div>
-                
             </div>
+            @endguest
+            
+            @auth
+            
+            <div class="mt-3">
+                <ul class="nav-item">
+                    <a class="nav-link" href="">Benvenuto {{ Auth::user()->name }}</a>
+                </ul>
+            </div>
+            
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class=" mx-3 button display-2 btn btn-outline-primary"><i
+                    class="fa-solid fa-right-to-bracket fa-sm" style="color: #c81933;"></i>
+                </button>
+            </form>
+            @endauth
         </div>
-    </nav>
+        
+    </div>
+</div>
+</nav>
 </div>
