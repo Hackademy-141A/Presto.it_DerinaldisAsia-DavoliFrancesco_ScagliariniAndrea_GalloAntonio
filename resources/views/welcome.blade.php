@@ -13,17 +13,17 @@
                 </ul>
         </div>
         @endif
-        <div class="container">
-                <div class="row">
+        <div class="container d-flex justify-content-center">
+                <div class="row text-center">
                         
                         @foreach ($announcements as $announcement )
                         <div class="col-12 col-md-4 mt-4">
                                 <div class="card" style="width: 18rem;">
                                         <img src="https://picsum.photos/200/200" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                                <h5 class="card-title">titolo:{{$announcement->title}}</h5>
-                                                <p class="card-text">{{$announcement->price}}</p>
-                                                <p class="card-text">Categoria:{{$announcement->category->name}}</p>
+                                        <div class="card-body">                                                
+                                                <h3 class="card-title">{{$announcement->title}}</h3>
+                                                <p class="card-text">{{$announcement->price}}€</p>
+                                                <p class="card-text">Categoria: {{$announcement->category->name}}</p>
                                                 <p class="card-text">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}}</p>
                                                 <a href="{{route('announcements.show',compact('announcement'))}}" class="btn btn-primary">Vai al dettaglio</a>
                                         </div>

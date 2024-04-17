@@ -5,8 +5,8 @@
     </div>
     @endif
     <div style="height: 60px"></div>
-    <div class="container">
-        <div class="row">
+    <div class="container ">
+        <div class="row justify-content-center">
             <div class="col-8">
                 <form wire:submit='store' enctype="multipart/form-data">
                     

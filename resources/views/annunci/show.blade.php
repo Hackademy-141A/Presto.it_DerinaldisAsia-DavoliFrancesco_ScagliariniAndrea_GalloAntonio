@@ -36,6 +36,7 @@
                         <p class="card-text">Pubblicato da:{{$announcement->user->name}}</p>
                         <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="btn btn-primary">Vai alle categorie</a>
                         <a href="{{route('home')}}" class="btn btn-danger">Torna indietro</a>
+                        
                     </div>
                 </div>
             </div>
