@@ -3,13 +3,13 @@
     --fine : #FED9B7;
     --root : #F07167;
 }
-
+/* immagine ? */
 .image {
     height: 60px;
     width: 60px;
     
 }
-
+/* navbar */
 .mynavbar {
     background-color: var(--root);
     top: 0;
@@ -24,6 +24,7 @@
     background-image:url(/public/img/presto_sfondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 150px;
 }
 
 
@@ -95,4 +96,15 @@
 
 .button {
     color-scheme: white ;
+};
+
+footer {
+    background-color: var(--fine);
+
 }
+
+
+
+
+
+

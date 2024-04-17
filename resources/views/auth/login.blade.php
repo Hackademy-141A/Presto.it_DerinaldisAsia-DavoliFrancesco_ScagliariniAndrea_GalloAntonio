@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container">
         <div class="row  d-flex justify-content-center text-center">
-            <div class="col-md-8">
+            <div class="col-md-5">
                 <div style="height: 200px"></div>
                 <h2>Accedi</h2>
 
@@ -27,7 +27,7 @@
                         <label for="password" class="form-label">Password</label>
                         <div class="input-group">
                             <input name="password" type="password" class="form-control" id="password">
-                            <button class="btn btn-outline-dark" type="button" onclick="togglePassword()">Mostra/Nascondi Password</button>
+                            <button class="btn btn-outline-dark bg-primary" type="button" onclick="togglePassword()">Mostra/Nascondi Password</button>
                         </div>
                     </div>
                     

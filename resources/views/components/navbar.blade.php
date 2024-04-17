@@ -41,10 +41,10 @@
                         </ul>
                     </li>
                 </ul>
-                <div class="buttonDad d-flex">
-                    <a href="{{ route('register') }}" class="glow-on-hover btn btn-outline-primary me-2"
+                <div class="buttonDad d-flex ">
+                    <a href="{{ route('register') }}" class="glow-on-hover btn btn-outline-primary  "
                         type="button">Registrati</a>
-                    <a href="{{ route('login') }}" class="glow-on-hover btn btn-outline-primary me-2"
+                    <a href="{{ route('login') }}" class="glow-on-hover btn btn-outline-primary "
                         type="button">Accedi</a>
                     @auth
                         <form method="POST" action="{{ route('logout') }}">

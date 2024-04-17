@@ -22,30 +22,44 @@
                                         @csrf
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Nome</label>
-                                            <input name="name" type="text" class="form-control" id="name">
+                                            <input name="name" placeholder="Nome" type="text" class="form-control" id="name">
                                         </div>
                                         <div class="mb-3">
                                             <label for="email" class="form-label">Email</label>
-                                            <input name="email" type="email" class="form-control" id="email">
+                                            <input name="email" placeholder="Email" type="email" class="form-control" id="email">
                                         </div>
                                         <div class="mb-3">
                                             <label for="password" class="form-label">Password</label>
-                                            <input name="password" type="password" class="form-control" id="password">
+                                            <input name="password" placeholder="Password" type="password" class="form-control" id="password">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="password_confirmation" class="form-label">Conferma
-                                                Password</label>
-                                            <input name="password_confirmation" type="password" class="form-control"
-                                                id="password_confirmation">
+                                            <label for="password_confirmation" class="form-label">
+                                               </label>
+                                                 
+                                            <input name="password_confirmation" placeholder="Conferma Password"  type="password" class="form-control"
+                                                id="password_confimation">
+                                              
                                         </div>
                                         <button type="submit" class="btn btn-primary">Registrati</button>
                                     </form>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        function togglePassword() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    
+    </script>
 </x-layout>
