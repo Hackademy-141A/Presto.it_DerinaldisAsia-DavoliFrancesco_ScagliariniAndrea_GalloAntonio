@@ -51,8 +51,7 @@ class PublicController extends Controller
 
         return redirect(route('home'))->with('message', 'Ti sei cancellato con successo');
     }
-
-    public function search(Request $request ){
+    public function searchAnnouncement(Request $request ){
         $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(10);
         return view('annunci.index', compact('announcements'));
     }

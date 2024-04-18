@@ -11,7 +11,12 @@ use Laravel\Scout\Searchable;
 class Announcement extends Model
 {
     use HasFactory ,Searchable;
-    
+    protected $fillable = [
+        'title',
+        'description',
+        'price',
+       
+    ];
     public function  toSearchableArray()
     {
         $category = $this->category;
@@ -19,8 +24,8 @@ class Announcement extends Model
             'title'=>$this->title,
             'description'=>$this->description,
             'price'=>$this->price,
-            'categoty'=>$category,
-           
+            'category'=>$category,
+            'id'=>$this->id,
         ];
         return $array;
     }

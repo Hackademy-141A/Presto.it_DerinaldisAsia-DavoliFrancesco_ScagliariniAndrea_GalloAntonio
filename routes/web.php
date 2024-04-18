@@ -30,5 +30,5 @@ Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rej
 Route::get('/richiesta/revisore',[RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');
 Route::get('/rendi/revisore/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor');
 Route::post('/contact-us/submit', [RevisorController::class, 'submit'])->name('contact.submit');
-Route::get('/ricerca/annuncio',[PublicController::class,'search'])->name('announcement.search');
+Route::get('/ricerca/annuncio',[PublicController::class,'searchAnnouncement'])->name('announcement.search');
 
