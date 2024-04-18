@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class PublicController extends Controller
 {
     public function home () {
-        $announcements = Announcement::take(6)->get()->sortByDesc('created_at');
+        $announcements = Announcement::where('is_accepted',true)->take(6)->get()->sortByDesc('created_at');
         return view('welcome',compact('announcements'));
     }
     
@@ -50,6 +50,11 @@ class PublicController extends Controller
         Auth::user()->delete();
 
         return redirect(route('home'))->with('message', 'Ti sei cancellato con successo');
+    }
+
+    public function search(Request $request ){
+        $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(10);
+        return view('annunci.index', compact('announcements'));
     }
 
 

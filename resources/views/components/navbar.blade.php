@@ -22,8 +22,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('create') }}">Crea un annuncio</a>
                 </li>
-                <li>
-                 
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('become.revisor') }}">Offerta</a>
                 </li>
                 
                 <li class="nav-item">
@@ -60,6 +60,11 @@
          
             
             @endguest
+
+            <form action="{{route('announcement.search')}}" method="GET" class="d-flex">
+                <input name="searched" class="form-control me-2" type="search" placeholder="search" aria-label="search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
             
             @auth
             
@@ -89,6 +94,7 @@
             </li>
             
             @endif
+          
             @endauth
          
         </div>

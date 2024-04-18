@@ -4,7 +4,7 @@
             <h2>Pubblicane uno: <a href="{{route('create')}}">Nuovo annuncio</h2>
             <div class="col-12 text-center">
                 <div class="row">
-                    @foreach ($announcements as $announcement )
+                    @forelse ($announcements as $announcement )
                         <div class="col-12 col-md-4 my-2">
                             <div class="card" style="width: 18rem;">
                                 <img src="https://picsum.photos/200/300" class="card-img-top" alt="...">
@@ -18,10 +18,16 @@
                                 </div>
                         </div>
                         </div>
+                        @empty
+                        <div class="col-12">
+                            <div class="alert alert-warning py-3 shadow">    
+                            <p>Non abbiamo trovato annunci per questa ricerca</p>
+                        </div>
+                        </div>
 
-                    @endforeach
+                    @endforelse
                     
-
+                        {{$announcements->links()}}
                     
                 </div>
             </div>

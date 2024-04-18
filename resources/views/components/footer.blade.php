@@ -1,5 +1,10 @@
 <!-- Footer -->
 <footer class="text-center" style="background-color:#fed9b7;">
+  @if (session('access.denied'))
+  <div class="alert alert-danger">
+          {{session('access.denied')}}
+  </div>
+  @endif
   <!-- Grid container -->
   <div class="container p-4">
 
@@ -35,6 +40,8 @@
         <div class="row d-flex justify-content-center">
           <!-- Email input -->
           <div class="col-md-5 col-12">
+           
+         
             <div class="form-outline mb-4">
               <input type="email" id="form5Example2" class="form-control" />
               <label class="form-label" for="form5Example2">Email address</label>

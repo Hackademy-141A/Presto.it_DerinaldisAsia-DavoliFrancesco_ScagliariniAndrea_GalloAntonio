@@ -24,7 +24,11 @@ Route::get('/annunci/create', [AnnouncementController::class,'create'])->middlew
 Route::get('/tutti/annunci',[AnnouncementController::class,'index'])->name('announcements.index');
 Route::get('/profile', [PublicController::class, 'index'])->name('profile.profile');
 Route::delete('/profile/delete',[PublicController::class, 'destroy'])->name('profile.delete');
-Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.index');
-Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->name('revisor.accept');
-Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->name('revisor.reject');
+Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('IsRevisor')->name('revisor.index');
+Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->middleware('IsRevisor')->name('revisor.accept');
+Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->middleware('IsRevisor')->name('revisor.reject');
+Route::get('/richiesta/revisore',[RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');
+Route::get('/rendi/revisore/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor');
+Route::post('/contact-us/submit', [RevisorController::class, 'submit'])->name('contact.submit');
+Route::get('/ricerca/annuncio',[PublicController::class,'search'])->name('announcement.search');
 

@@ -6,19 +6,25 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Laravel\Scout\Searchable;
 
 class Announcement extends Model
 {
-    use HasFactory;
+    use HasFactory ,Searchable;
     
-    
-    protected $fillable = [
-        'title',
-        'description',
-        'price',
-       
-    ];
-
+    public function  toSearchableArray()
+    {
+        $category = $this->category;
+        $array = [
+            'title'=>$this->title,
+            'description'=>$this->description,
+            'price'=>$this->price,
+            'categoty'=>$category,
+           
+        ];
+        return $array;
+    }
+   
     public function category(){
 
         return $this->belongsTo(Category::class);
