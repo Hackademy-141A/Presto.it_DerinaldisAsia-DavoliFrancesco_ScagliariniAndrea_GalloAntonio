@@ -12,6 +12,7 @@
     <p>ecco i suoi dati</p>
     <p>nome {{$user->name}}</p>
     <p>email {{$user->email}}</p>
+    <p>corpo {{$body}}</p>
     <p>se vuoi renderlo revisore clicca qui</p>
     <a href="{{route('make.revisor',compact('user'))}}">Rendi revisore</a>
     

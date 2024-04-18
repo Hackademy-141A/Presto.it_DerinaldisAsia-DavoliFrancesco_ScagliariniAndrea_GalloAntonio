@@ -1,15 +1,16 @@
 <x-layout>
     @if (session('message'))
-    <div class="alert alert-danger">
+    <div class="alert alert-success">
             {{session('message')}}
     </div>
     @endif
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-5 text-center">
-                <form method="POST" action="{{ route('contact.submit') }}">
+                <form method="GET" action="{{route('become.revisor')}}">
 
                     @csrf
+                    
 
                     <div class="mb-3">
                         <label for="inputEmail" class="form-label">Inserisci la tua email</label>

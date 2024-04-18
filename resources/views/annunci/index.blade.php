@@ -26,8 +26,10 @@
                         </div>
 
                     @endforelse
-                    
-                        {{$announcements->links()}}
+                        <div class="col-3">
+
+                            {{$announcements->links()}}
+                        </div>
                     
                 </div>
             </div>

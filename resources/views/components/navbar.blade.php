@@ -29,6 +29,21 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('profile.profile') }}">Vai al profilo</a>
                 </li>
+
+                
+            @if (Auth::user()->is_revisor)
+         
+            <li>
+                <a class="btn-info w-100" href="{{route('revisor.index')}}">Revisore
+                <span class="bg-danger">
+                    {{App\Models\Announcement::toBeRevisionedCount()}}
+                    <span class="visually-hidden">Articoli non revisionati</span>
+                    </span>
+                </a>
+
+            </li>
+            
+            @endif
                 
                 @endauth
                 <li class="nav-item dropdown">
@@ -81,19 +96,6 @@
                 </button>
             </form>
 
-            @if (Auth::user()->is_revisor)
-         
-            <li>
-                <a class="btn-info w-100" href="{{route('revisor.index')}}">Revisore
-                <span class="bg-danger">
-                    {{App\Models\Announcement::toBeRevisionedCount()}}
-                    <span class="visually-hidden">Articoli non revisionati</span>
-                    </span>
-                </a>
-
-            </li>
-            
-            @endif
           
             @endauth
          

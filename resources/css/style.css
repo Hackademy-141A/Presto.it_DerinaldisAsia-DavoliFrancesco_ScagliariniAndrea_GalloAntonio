@@ -21,9 +21,10 @@
 
 
 .body {
-    background-image:url(/public/img/presto_sfondo.jpg);
+    background-image:url(/public/img/Senza_titolo_2.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     margin-top: 150px;
 }
 

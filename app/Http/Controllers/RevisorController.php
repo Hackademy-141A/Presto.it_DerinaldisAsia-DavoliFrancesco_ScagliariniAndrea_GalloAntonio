@@ -30,10 +30,16 @@ class RevisorController extends Controller
         return redirect()->back()->with('message', 'Complimenti hai rifiutato l\'annuncio');
     }
 
-    public function becomeRevisor(){
-        Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
+    public function becomeRevisor(Request $request){
         
-        return view('work.withus')->with('message','Complimenti, hai richiesto di diventare revisore');
+        $name = $request->name;
+        $email = $request->email;
+        $body = $request->body;
+
+        Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user(),$body));
+        
+        //Riportando alla vista homepage tramite l'helper di laravel che ci reindirizza ad una rotta di tipo get quindi ad un qualcosa di visionabile
+        return redirect(route('home'))->with('message','Ti abbiamo mandato una mail, controlla la casella di posta elettronica');
 
         
 
@@ -43,33 +49,10 @@ class RevisorController extends Controller
         return redirect()->back()->with('message','Complimenti, sei diventato revisore');
     }
 
-    public function contactUs(){
-        return view('contactUs');
-    }
+   
 
 
-    //logica che avviene quando scatta una rotta di tipo post che quindi deve ritornare un risorva get
-    public function submit(Request $request){
-
-        $name = $request->name;
-        $email = $request->email;
-        $body = $request->body;
-
-       
-        $userData = compact('name', 'email','body');
-        Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
-        
-        return view('work.withus')->with('message','Complimenti, hai richiesto di diventare revisore');
-
-
-
-
-        //Riportando alla vista homepage tramite l'helper di laravel che ci reindirizza ad una rotta di tipo get quindi ad un qualcosa di visionabile
-        return redirect(route('home'))->with('message','Ti abbiamo mandato una mail, controlla la casella di posta elettronica');
-
-    
-}
-
+ 
 
 
 
