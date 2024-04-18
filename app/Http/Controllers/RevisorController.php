@@ -36,7 +36,8 @@ class RevisorController extends Controller
         $email = $request->email;
         $body = $request->body;
 
-        Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user(),$body));
+        Mail::to('revidor@presto.it')->send(new BecomeRevisor(Auth::user(),$body));
+
         
         //Riportando alla vista homepage tramite l'helper di laravel che ci reindirizza ad una rotta di tipo get quindi ad un qualcosa di visionabile
         return redirect(route('home'))->with('message','Ti abbiamo mandato una mail, controlla la casella di posta elettronica');
@@ -46,7 +47,7 @@ class RevisorController extends Controller
     }
     public function makeRevisor(User $user){
         Artisan::call('app:make-user-revisor',["email"=>$user->email]);
-        return redirect()->back()->with('message','Complimenti, sei diventato revisore');
+        return redirect()->back()->with('revisor','Complimenti, sei diventato revisore');
     }
 
    

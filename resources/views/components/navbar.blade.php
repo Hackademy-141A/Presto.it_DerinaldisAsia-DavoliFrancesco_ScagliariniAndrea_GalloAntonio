@@ -4,7 +4,7 @@
         <div class="container">
             <a class="navbar-brand" href="#">
                 <!-- Inseriamo il logo -->
-                <img id="logo" class="image" src="/img/logo_presto.jpg" alt="logo del sito">
+                <img id="logo" class="image" src="/img/Senza_titolo_5.png" alt="logo del sito">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

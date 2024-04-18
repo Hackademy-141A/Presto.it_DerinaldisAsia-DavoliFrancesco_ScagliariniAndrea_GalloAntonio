@@ -9,7 +9,7 @@
 </head>
 <body class="body">
     <x-navbar/>
-    <div class="min-vw-100" >
+    <div class="min-vh-100" >
 
         {{$slot}}
     </div>
