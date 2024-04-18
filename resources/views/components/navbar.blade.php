@@ -60,7 +60,10 @@
             </ul>
           
                 
-            
+            <x-language lang="it"/>
+            <x-language lang="en"/>
+            <x-language lang="de"/>
+
             
             
             
