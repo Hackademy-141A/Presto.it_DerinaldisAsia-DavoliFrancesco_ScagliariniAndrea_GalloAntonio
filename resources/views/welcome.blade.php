@@ -25,7 +25,7 @@
         @endif
         <div class="container d-flex justify-content-center">
                 <div class="row text-center">
-                        
+                        <h2 class="display-1">{{ __('message.welcome') }}</h2>
                         @foreach ($announcements as $announcement )
                         <div class="col-12 col-md-4 mt-4">
                                 <div class="card" style="width: 18rem;">

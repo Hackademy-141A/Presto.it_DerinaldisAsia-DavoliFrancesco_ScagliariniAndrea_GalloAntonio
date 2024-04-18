@@ -31,4 +31,5 @@ Route::get('/richiesta/revisore',[RevisorController::class,'becomeRevisor'])->mi
 Route::get('/rendi/revisore/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor');
 // Route::post('/contact-us/submit', [RevisorController::class, 'submit'])->name('contact.submit');
 Route::get('/ricerca/annuncio',[PublicController::class,'searchAnnouncement'])->name('announcement.search');
-
+// rotta lingue
+Route::post('/lingua{lang}',[PublicController::class,'setLanguage'])->name('set_language_locale');
