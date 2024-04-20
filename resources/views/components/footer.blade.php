@@ -1,112 +1,73 @@
 <!-- Footer -->
-<footer class="text-center" style="background-color:#fed9b7;">
-  @if (session('access.denied'))
-  <div class="alert alert-danger">
-          {{session('access.denied')}}
-  </div>
-  @endif
-  <!-- Grid container -->
-  <div class="container p-4">
-
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      <!-- Social media icons -->
-      <div class="d-flex justify-content-center">
-        <!-- Facebook -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-
-        <!-- Twitter -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-
-        <!-- Google -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i class="fab fa-google"></i></a>
-
-        <!-- Instagram -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>
-
-        <!-- Linkedin -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
-
-        <!-- Github -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!" role="button"><i class="fab fa-github"></i></a>
-      </div>
-    </section>
-    <!-- Section: Social media -->
-
-    <!-- Section: Form -->
-    <section class="">
-      <form action="">
-        <!-- Grid row -->
-        <div class="row d-flex justify-content-center">
-          <!-- Email input -->
-          <div class="col-md-5 col-12">
-           
-         
-            <div class="form-outline mb-4">
-              <input type="email" id="form5Example2" class="form-control" />
-              <label class="form-label" for="form5Example2">Email address</label>
-            </div>
-          </div>
-          <!-- Submit button -->
-          <div class="col-auto">
-            <button type="submit" class=" glow-on-hover mb-4">
-              Subscribe
-            </button>
-          </div>
+<footer class="text-center" style=" background: rgb(246,182,18);
+background: linear-gradient(117deg, rgba(246,182,18,1) 0%, rgba(108,237,255,1) 100%);">
+    <!-- Sezione per eventuali messaggi di errore -->
+    @if (session('access.denied'))
+        <div class="alert alert-danger">
+            {{ session('access.denied') }}
         </div>
-        <!-- Grid row -->
-      </form>
-    </section>
-    <!-- Section: Form -->
+    @endif
+    <!-- Contenitore della griglia -->
+    <div class="container p-4">
 
-    <!-- Section: Text -->
-    {{-- <section class="mb-4">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum harum corrupti dicta, aliquam sequi voluptate quas.
-      </p>
-    </section> --}}
-    <!-- Section: Text -->
+        <!-- Sezione: Social media -->
+        <section class="mb-4">
+            <!-- Icone dei social media -->
+            <div class="d-flex justify-content-center">
+                <!-- Facebook -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!"
+                    role="button"><i class="fab fa-facebook-f"></i></a>
 
-    <!-- Section: Links -->
-    <section class="">
-      <!--Grid row-->
-      <div class="row">
-        <!--Grid column-->
-        {{-- <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-dark">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Link 4</a>
-            </li>
-          </ul>
-        </div> --}}
-        <!--Grid column-->
+                <!-- Twitter -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!"
+                    role="button"><i class="fab fa-twitter"></i></a>
 
-        <!-- Repeat other grid columns as needed -->
+                <!-- Google -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!"
+                    role="button"><i class="fab fa-google"></i></a>
 
-      </div>
-      <!--Grid row-->
-    </section>
-    <!-- Section: Links -->
+                <!-- Instagram -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!"
+                    role="button"><i class="fab fa-instagram"></i></a>
 
-  </div>
-  <!-- Grid container -->
+                <!-- Linkedin -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!"
+                    role="button"><i class="fab fa-linkedin-in"></i></a>
 
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-    © 2024 Copyright:
-    <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
+                <!-- Github -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!"
+                    role="button"><i class="fab fa-github"></i></a>
+            </div>
+        </section>
+        <!-- Fine sezione: Social media -->
 
-</footer>
-<!-- Footer -->
+        <!-- Sezione: Form -->
+        <section class="mb-4">
+            <form action="">
+                <!-- Righe della griglia -->
+                <div class="row justify-content-center">
+                    <!-- Input per l'email -->
+                    <div class="col-md-5 col-12">
+                        <div class="form-outline mb-4">
+                            <input type="email" id="form5Example2" class="form-control" />
+                            <label class="form-label" for="form5Example2">Indirizzo email</label>
+                        </div>
+                    </div>
+                    <!-- Pulsante di invio -->
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mb-4">
+                            Iscriviti
+                        </button>
+                    </div>
+                </div>
+                <!-- Fine righe della griglia -->
+            </form>
+        </section>
+        <!-- Fine sezione: Form -->
+        <!-- Copyright -->
+        <div class="text-center  p-0" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2024 Copyright:
+            <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Sezione: Links -->
+        <section
