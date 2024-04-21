@@ -33,7 +33,8 @@
                         <!-- Informazioni sull'annuncio -->
                         <h3>Titolo: {{ $announcement->title }}</h3>
                         <span class="card-text btn-warning p-1">Prezzo: {{ $announcement->price }}$</span>
-                        <p class="card-text">Categoria: {{ $announcement->category->name }}</p>
+                        <p class="card-text mt-4">Categoria: {{ $announcement->category->name }}</p>
+                        <p class="card-title">{{$announcement->description}}</p>
                         <p class="card-text">Pubblicato il: {{ $announcement->created_at->format('d/m/Y') }}</p>
                         <p class="card-text">Pubblicato da: {{ $announcement->user->name }}</p>
                         <!-- Pulsanti di navigazione -->

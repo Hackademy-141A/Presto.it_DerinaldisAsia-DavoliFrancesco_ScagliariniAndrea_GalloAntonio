@@ -3,7 +3,7 @@
     <!-- Navbar Bootstrap -->
     <nav class="navbar navbar-expand-lg bg-navbar bg-dark fixed-top mynavbar">
         <!-- Logo del sito nella navbar -->
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ route('home') }}">
             <img id="logo" class="imagelogo" src="/img/Senza_titolo_5.png" alt="logo del sito">
         </a>
         <!-- Bottone per il toggle della navbar su dispositivi mobili -->

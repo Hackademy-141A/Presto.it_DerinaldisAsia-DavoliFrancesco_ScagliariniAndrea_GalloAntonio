@@ -26,8 +26,8 @@
                 </div>
                 @empty
                 <div class="col-12 text-center"> <!-- Se non ci sono annunci, centra il testo -->
-                    <p>Non sono ancora presenti degli annunci!</p>
-                    <h2>Pubblicane uno: <a href="{{ route('create') }}">Nuovo annuncio</a></h2>
+                    <h2 class="text-center">Non sono ancora presenti degli annunci!</h2>
+                    <h3>Pubblicane uno: <a href="{{ route('create') }}">Nuovo annuncio</a></h3>
                 </div>
                 @endforelse
             </div>
