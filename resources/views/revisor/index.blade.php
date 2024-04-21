@@ -44,28 +44,32 @@
                         </button>
                       </div>
                     <!-- Dettagli dell'annuncio -->
-                    <h5 class="text-dark mx-5 mt-2">Titolo: {{$announcement_to_check->title}}</h5>
-                    <p class="card-text text-dark mx-3"> {{$announcement_to_check->user->name}}</p>
+                    <h5 class="text-dark mx-5 mt-2 text-center">Titolo: {{$announcement_to_check->title}}</h5>
+                    <p class="card-text text-dark mx-3">Pubblicato da : {{$announcement_to_check->user->name}}</p>
                     <p class="card-text text-dark mx-3">Descrizione: {{$announcement_to_check->description}}</p>
                     <p class="text-dark mx-3">Data di creazione: {{$announcement_to_check->created_at->format('d/m/Y')}}</p>
                 </div>
             </div>
-            <div class="col-12 mx-3 mt-4 px-5 d-flex justify-content-center">
-                <!-- Form per accettare l'annuncio -->
-                <form action="{{route ('revisor.accept', ['announcement'=>$announcement_to_check])}}" method="POST">
-                    @csrf
-                    @method('PATCH')
-                    <button type="submit" class="btn btn-success shadow">Accetta</button>
-                </form>
-            </div> 
-           
-            <div class="col-12 mx-3 mt-4 px-5 d-flex justify-content-center">
-                <!-- Form per rifiutare l'annuncio -->
-                <form action="{{route('revisor.reject' , ['announcement'=>$announcement_to_check])}}" method="POST">
-                    @csrf
-                    @method('PATCH')
-                    <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
-                </form>
+            
+            <div class="container">
+                <div class="row justify-content-center mt-3">
+                    <div class="col-md-1 text-center buttonone">
+                        <!-- Form per accettare l'annuncio -->
+                        <form action="{{ route('revisor.accept', ['announcement' => $announcement_to_check]) }}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button type="submit" class="btn btn-success shadow">Accetta</button>
+                        </form>
+                    </div>
+                    <div class="col-md-1 text-center buttontwo">
+                        <!-- Form per rifiutare l'annuncio -->
+                        <form action="{{ route('revisor.reject', ['announcement' => $announcement_to_check]) }}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
