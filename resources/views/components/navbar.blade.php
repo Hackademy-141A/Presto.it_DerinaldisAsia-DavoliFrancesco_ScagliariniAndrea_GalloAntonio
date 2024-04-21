@@ -100,6 +100,14 @@
                     @csrf
                 </form>
             </li>
+            <li class="p-0 m-0">
+                 <!-- Form per cancellare l'account -->
+                 <form method="POST" action="{{ route('profile.delete') }}">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn">Cancella account</button>
+                </form>
+            </li>
         </ul>
     </li>
     

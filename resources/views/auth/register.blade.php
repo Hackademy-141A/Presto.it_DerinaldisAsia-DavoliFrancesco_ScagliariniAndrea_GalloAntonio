@@ -3,7 +3,7 @@
         <div class="row d-flex justify-content-center text-center">
             <div class="col-md-8">
                 <!-- Spazio vuoto per il layout -->
-                <div style="height: 200px"></div>
+                {{-- <div style="height: 200px"></div> --}}
     
                 <!-- Sfondo personalizzato -->
                 <div class="custom-bg">

@@ -1,15 +1,6 @@
 <x-layout>
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <!-- Form per cancellare l'account -->
-                <form method="POST" action="{{ route('profile.delete') }}">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Cancella account</button>
-                </form>
-            </div>
-        </div>
+        
     
         <div class="row">
             @forelse ($announcements as $announcement)
