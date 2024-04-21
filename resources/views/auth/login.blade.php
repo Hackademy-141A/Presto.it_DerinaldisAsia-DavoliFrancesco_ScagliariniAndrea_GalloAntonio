@@ -5,7 +5,7 @@
             <!-- Inizio colonna -->
             <div class="col-md-8 col-lg-6"> <!-- Utilizzate le classi col-md-8 e col-lg-6 per gestire il layout su dispositivi di diverse dimensioni -->
                 <!-- Spazio vuoto per l'allineamento verticale -->
-                <div style="height: 100px"></div> <!-- L'altezza ridotta per adattarsi meglio agli schermi più piccoli -->
+                <div style="height: 40px"></div> <!-- L'altezza ridotta per adattarsi meglio agli schermi più piccoli -->
                 <h2>Accedi</h2>
     
                 <!-- Verifica degli errori di validazione -->
@@ -24,7 +24,7 @@
                     @csrf <!-- Protezione CSRF -->
     
                     <!-- Campo email -->
-                    <div class="mb-3">
+                    <div class="mb-3 mt-4">
                         <label for="email" class="form-label">Email</label>
                         <input name="email" type="email" class="form-control" id="email" required> <!-- Aggiunto attributo required per la validazione -->
                     </div>
@@ -34,12 +34,12 @@
                         <label for="password" class="form-label">Password</label>
                         <div class="input-group">
                             <input name="password" type="password" class="form-control" id="password" required> <!-- Aggiunto attributo required per la validazione -->
-                            <button class="btn btn-outline-dark bg-primary" type="button" onclick="togglePassword()">Mostra/Nascondi Password</button>
+                            <button class="btn btn-warning" type="button" onclick="togglePassword()">Mostra</button>
                         </div>
                     </div>
                     
                     <!-- Pulsante di accesso -->
-                    <button type="submit" class="btn btn-primary">Accedi</button>
+                    <button type="submit" class="btn btn-warning mt-4">Accedi</button>
                 </form>
             </div> <!-- Fine colonna -->
         </div> <!-- Fine riga -->

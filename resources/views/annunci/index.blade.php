@@ -1,9 +1,10 @@
 <x-layout>
+    <x-research></x-research>
     <div class="container d-flex justify-content-center">
         <div class="row text-center">
             <!-- Titolo e link per creare un nuovo annuncio -->
             
-            <button class="dropdown-item1" href="{{route('create')}}"><h2>Pubblica Nuovo Annuncio </h2></button>
+            <button class="dropdown-item1 mt-3" href="{{route('create')}}"><h2>Pubblica Nuovo Annuncio </h2></button>
             <div class="col-12 text-center">
                 <div class="row">
                     <!-- Ciclo attraverso gli annunci -->

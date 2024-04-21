@@ -41,19 +41,31 @@
                                             <!-- Input password con icona per mostrare/nascondere la password -->
                                             <div class="input-group">
                                                 <input name="password" placeholder="Password" type="password" class="form-control" id="password">
-                                                <button class="btn btn-outline-secondary" type="button" onclick="togglePassword()">
+                                                <button class="btn btn-warning" type="button" onclick="togglePassword()">Mostra</button>
                                                     <!-- Icona per mostrare/nascondere la password -->
                                                     <i class="bi bi-eye"></i>
                                                 </button>
                                             </div>
                                         </div>
+                                        
                                         <!-- Conferma Password -->
+
                                         <div class="mb-3">
                                             <label for="password_confirmation" class="form-label">Conferma Password</label>
-                                            <input name="password_confirmation" placeholder="Conferma Password"  type="password" class="form-control" id="password_confirmation">
+                                            <!-- Input password con icona per mostrare/nascondere la password -->
+                                            <div class="input-group">
+                                                <input name="password_confirmation" placeholder="Conferma Password" type="password" class="form-control" id="password_confirmation">
+                                                <button class="btn btn-warning" type="button" onclick="togglePassword()">Mostra</button>
+                                                    <!-- Icona per mostrare/nascondere la password -->
+                                                    <i class="bi bi-eye"></i>
+                                                </button>
+                                            </div>
                                         </div>
+
+
+
                                         <!-- Bottone di registrazione -->
-                                        <button type="submit" class="btn btn-primary">Registrati</button>
+                                        <button type="submit" class="btn btn-warning mt-3">Registrati</button>
                                     </form>
                                 </div>
                             </div>

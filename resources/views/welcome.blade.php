@@ -1,7 +1,8 @@
 <x-layout>
+    <x-research></x-research>
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 mt-3">
                 @if (session('access.denied'))
                     <!-- Mostra un messaggio di errore se l'accesso è negato -->
                     <div class="alert alert-danger">

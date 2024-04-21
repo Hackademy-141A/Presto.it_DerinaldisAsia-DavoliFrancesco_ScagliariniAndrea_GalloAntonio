@@ -74,7 +74,7 @@
         <li class="nav-item dropdown drop">
             <a class="nav-link dropdown-toggle" id="navbarDropdownUser" role="button"
             data-bs-toggle="dropdown">
-            <i class="fa-solid fa-user"></i> Utente
+            <i class="fa-solid fa-user">  {{ Auth::user()->name }}</i>
         </a>
         <!-- Menu a tendina con le categorie -->
         <ul class="dropdown-menu about" >
@@ -148,9 +148,9 @@
 @guest
 <div class="d-flex">
     <!-- Bottone per registrarsi -->
-    <a href="{{ route('register') }}" class="btn btn-outline-primary me-3">Registrati</a>
+    <a href="{{ route('register') }}" class="btn btn-outline-dark me-3">Registrati</a>
     <!-- Bottone per accedere -->
-    <a href="{{ route('login') }}" class="btn btn-outline-primary">Accedi</a>
+    <a href="{{ route('login') }}" class="btn btn-outline-dark">Accedi</a>
 </div>
 
 @endguest 

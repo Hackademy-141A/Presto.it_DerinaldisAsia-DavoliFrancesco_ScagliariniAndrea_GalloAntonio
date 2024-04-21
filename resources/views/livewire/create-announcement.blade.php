@@ -14,7 +14,7 @@
         <!-- Riga per allineare il contenuto al centro -->
         <div class="row justify-content-center">
             <!-- Colonna che occupa 8 su 12 colonne su schermi medi e grandi -->
-            <div class="col-md-8">
+            <div class="text-center col-md-8">
                 <!-- Form per l'invio dei dati -->
                 <form wire:submit='store' enctype="multipart/form-data">
                     <!-- Campo Titolo -->
