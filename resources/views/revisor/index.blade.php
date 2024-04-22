@@ -19,30 +19,30 @@
         <div class="row ">
             <div class="col-12 mx-3 mt-4 d-flex justify-content-center">
                 <!-- Carousel per visualizzare le immagini degli annunci -->
-              
+                
                 <div class="card prova">
                     <!-- Carousel per le immagini dell'annuncio -->
                     <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
                         <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="https://picsum.photos/800/601" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://picsum.photos/800/602" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://picsum.photos/800/603" class="d-block w-100" alt="...">
-                          </div>
+                            <div class="carousel-item active">
+                                <img src="https://picsum.photos/800/601" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://picsum.photos/800/602" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://picsum.photos/800/603" class="d-block w-100" alt="...">
+                            </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
                         </button>
-                      </div>
+                    </div>
                     <!-- Dettagli dell'annuncio -->
                     <h5 class="text-dark mx-5 mt-2 text-center">Titolo: {{$announcement_to_check->title}}</h5>
                     <p class="card-text text-dark mx-3">Pubblicato da : {{$announcement_to_check->name}}</p>

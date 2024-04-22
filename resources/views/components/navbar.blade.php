@@ -35,7 +35,7 @@
                 <a class="nav-link" href="{{ route('create') }}">
                     <i class="fa-solid fa-plus" style="color: #01060e;"></i>
                     Crea annunci
-                    </a>
+                </a>
             </li>
             @if (!Auth::user()->is_revisor)
             <li class="nav-item">
@@ -67,8 +67,8 @@
                     @endforeach
                 </ul>
             </li>
-        
-       
+            
+            
         </ul>
         @auth
         <li class="nav-item dropdown drop">
@@ -101,8 +101,8 @@
                 </form>
             </li>
             <li class="p-0 m-0">
-                 <!-- Form per cancellare l'account -->
-                 <form method="POST" action="{{ route('profile.delete') }}">
+                <!-- Form per cancellare l'account -->
+                <form method="POST" action="{{ route('profile.delete') }}">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn">Cancella account</button>
@@ -111,48 +111,48 @@
         </ul>
     </li>
     
-
-
-
     
-
-
-   
-@endauth  
-
-<!-- Sezione per gli utenti non autenticati -->
-@guest
-<div class="d-flex">
-    <!-- Bottone per registrarsi -->
-    <a href="{{ route('register') }}" class="btn btn-outline-dark me-3">Registrati</a>
-    <!-- Bottone per accedere -->
-    <a href="{{ route('login') }}" class="btn btn-outline-dark me-3">Accedi</a>
-</div>
-
-@endguest 
-<li class="nav-item dropdown drop me-3">
+    
+    
+    
+    
+    
+    
+    @endauth  
+    
+    <!-- Sezione per gli utenti non autenticati -->
+    @guest
+    <div class="d-flex">
+        <!-- Bottone per registrarsi -->
+        <a href="{{ route('register') }}" class="btn btn-outline-dark me-3">Registrati</a>
+        <!-- Bottone per accedere -->
+        <a href="{{ route('login') }}" class="btn btn-outline-dark me-3">Accedi</a>
+    </div>
+    
+    @endguest 
+    <li class="nav-item dropdown drop me-3">
         <a class="nav-link dropdown-toggle" id="navbarDropdownUser" role="button"
         data-bs-toggle="dropdown">
         <i class="fa-solid fa-globe"></i> Seleziona la lingua
     </a>
     <!-- Menu a tendina per le lingue -->
     <ul class="dropdown-menu about languages-container" >
-       
+        
         <li class="">
             
-            <a class="dropdown-item imagelang" href="#"><x-language lang="it" /></a>
-       
-           
+            <x-language lang="it"/>
+            
+            
         </li>
         <li class="">
-            <a class="dropdown-item" href="#"><x-language lang="en" /></a>
-           
+            <x-language lang="en" />
+            
         </li>
         <li>
-            <a class="dropdown-item" href="#"><x-language lang="es" /></a>
-           
+            <x-language lang="es" />
+            
         </li>
-       
+        
     </ul>
 </li>
 
