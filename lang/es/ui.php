@@ -11,7 +11,7 @@ return [
 
     'motori' => 'motores',
 
-    'eletronica' =>  'electrónica',
+    'elettronica' =>  'electrónica',
 
     'giardinaggio' =>  'jardinería',
 
