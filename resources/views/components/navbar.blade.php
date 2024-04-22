@@ -18,13 +18,13 @@
             <!-- Link per la homepage -->
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('home') }}">
-                    <i class="fa-solid fa-house "></i> Home
+                    <i class="fa-solid fa-house "></i> {{__('ui.Home')}}
                 </a>
             </li>
             <!-- Link per gli annunci -->
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('announcements.index') }}">
-                    <i class="fa-solid fa-bullhorn" style="color: black"  ></i> {{__('ui.Annunci')}}
+                    <i class="fa-solid fa-bullhorn" style="color: black"  ></i>{{__('ui.Annunci')}}
                 </a>
             </li>
             <!-- Link per diventare revisore -->
@@ -40,7 +40,7 @@
             @if (!Auth::user()->is_revisor)
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('become.revisor') }}">
-                    <i class="fa-solid fa-list-check"></i> {{__('ui.Diventa revisore')}}
+                    <i class="fa-solid fa-list-check"></i>{{__('ui.Diventa revisore')}}
                 </a>
             </li>
             @endif
@@ -80,13 +80,13 @@
         <ul class="dropdown-menu about" >
             <li>
                 <!-- Link per accedere al proprio profilo -->
-                <a class="dropdown-item" href="{{ route('profile.profile') }}">{{__('ui.Profilo')}} </a>
+                <a class="dropdown-item" href="{{ route('profile.profile') }}">{{__('ui.Profilo')}}</a>
             </li>
             <li class="my-2 revisor mx-2 ">
                 
                 <!-- Se l'utente è un revisore, mostra il link alla sezione revisore -->
                 @if (Auth::user() && Auth::user()->is_revisor)
-                <a href="{{ route('revisor.index') }}" class="badge bg-dark me-3"> {{__('ui.Da Revisionare')}}
+                <a href="{{ route('revisor.index') }}" class="badge bg-dark me-3">{{__('ui.Da Revisionare')}}
                     <span>{{ App\Models\Announcement::toBeRevisionedCount() }}</span>
                 </a>
                 @endif
@@ -94,7 +94,7 @@
             <li>
                 <!-- Form per il logout -->
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    Logout
+                    {{__('ui.Logout')}}
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                     @csrf
@@ -124,7 +124,7 @@
     @guest
     <div class="d-flex">
         <!-- Bottone per registrarsi -->
-        <a href="{{ route('register') }}" class="btn btn-outline-dark me-3"> {{__('ui.Registrati')}}</a>
+        <a href="{{ route('register') }}" class="btn btn-outline-dark me-3">{{__('ui.Registrati')}}</a>
         <!-- Bottone per accedere -->
         <a href="{{ route('login') }}" class="btn btn-outline-dark me-3">{{__('ui.Accedi')}}</a>
     </div>
@@ -133,7 +133,7 @@
     <li class="nav-item dropdown drop me-3">
         <a class="nav-link dropdown-toggle" id="navbarDropdownUser" role="button"
         data-bs-toggle="dropdown">
-        <i class="fa-solid fa-globe"></i> {{__('ui.Seleziona la lingua')}}
+        <i class="fa-solid fa-globe"></i>{{__('ui.Seleziona la lingua')}}
     </a>
     <!-- Menu a tendina per le lingue -->
     <ul class="dropdown-menu about languages-container" >

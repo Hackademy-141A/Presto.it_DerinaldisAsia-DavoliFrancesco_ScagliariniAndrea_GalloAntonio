@@ -29,6 +29,8 @@ return [
 
     'immobili' =>  'immobili',
 
+    'Home' => 'home', 
+
     'Annunci' =>  'Annunci',
 
     'DataDiPubblicazione' =>  'Data di Publicazione',
@@ -58,6 +60,8 @@ return [
     'Crea annunci' => 'Crea annunci',
 
     'Profilo' => 'Profilo',
+
+    'Logout' => 'disconnettiti',
 
     'Cancella account' => 'Cancella account',
 

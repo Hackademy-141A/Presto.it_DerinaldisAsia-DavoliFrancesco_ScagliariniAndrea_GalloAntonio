@@ -29,6 +29,8 @@ return [
 
     'immobili' =>  'propiedades',
 
+    'Home' => 'Hogar', 
+
     'Annunci' =>  'Anuncios',
 
     'DataDiPubblicazione' =>  'fecha de publicación',
@@ -37,7 +39,7 @@ return [
 
     'Registrati' => 'Iniciar sesión',
 
-    'Accedi' => ' Iniciar sesión', 
+    'Accedi' => 'acceso', 
 
     'Seleziona la lingua' => 'Seleccione el idioma',
 
@@ -58,6 +60,8 @@ return [
     'Crea annunci' => 'Crear anuncios',
 
     'Profilo' => 'Perfil',
+
+    'Logout' => 'cerrar sesión',
 
     'Cancella account' => 'Borrar cuenta',
 
