@@ -24,7 +24,7 @@
             <!-- Link per gli annunci -->
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('announcements.index') }}">
-                    <i class="fa-solid fa-bullhorn" style="color: black"  ></i> Annunci
+                    <i class="fa-solid fa-bullhorn" style="color: black"  ></i> {{__('ui.Annunci')}}
                 </a>
             </li>
             <!-- Link per diventare revisore -->
@@ -34,13 +34,13 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('create') }}">
                     <i class="fa-solid fa-plus" style="color: #01060e;"></i>
-                    Crea annunci
+                    {{__('ui.Crea annunci')}}
                 </a>
             </li>
             @if (!Auth::user()->is_revisor)
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('become.revisor') }}">
-                    <i class="fa-solid fa-list-check"></i> Diventa revisore
+                    <i class="fa-solid fa-list-check"></i> {{__('ui.Diventa revisore')}}
                 </a>
             </li>
             @endif
@@ -54,7 +54,7 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa-solid fa-list"></i> 
-                Categorie</a>
+                {{__('ui.Categorie')}}</a>
                 <!-- Menu a tendina con le categorie -->
                 <ul class="dropdown-menu" aria-="navbarDropdown">
                     <!-- Loop attraverso le categorie -->
@@ -80,13 +80,13 @@
         <ul class="dropdown-menu about" >
             <li>
                 <!-- Link per accedere al proprio profilo -->
-                <a class="dropdown-item" href="{{ route('profile.profile') }}">Profilo</a>
+                <a class="dropdown-item" href="{{ route('profile.profile') }}">{{__('ui.Profilo')}} </a>
             </li>
             <li class="my-2 revisor mx-2 ">
                 
                 <!-- Se l'utente è un revisore, mostra il link alla sezione revisore -->
                 @if (Auth::user() && Auth::user()->is_revisor)
-                <a href="{{ route('revisor.index') }}" class="badge bg-dark me-3">Da Revisionare
+                <a href="{{ route('revisor.index') }}" class="badge bg-dark me-3"> {{__('ui.Da Revisionare')}}
                     <span>{{ App\Models\Announcement::toBeRevisionedCount() }}</span>
                 </a>
                 @endif
@@ -105,7 +105,7 @@
                 <form method="POST" action="{{ route('profile.delete') }}">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn">Cancella account</button>
+                    <button type="submit" class="btn"> {{__('ui.Cancella account')}}</button>
                 </form>
             </li>
         </ul>
@@ -124,16 +124,16 @@
     @guest
     <div class="d-flex">
         <!-- Bottone per registrarsi -->
-        <a href="{{ route('register') }}" class="btn btn-outline-dark me-3">Registrati</a>
+        <a href="{{ route('register') }}" class="btn btn-outline-dark me-3"> {{__('ui.Registrati')}}</a>
         <!-- Bottone per accedere -->
-        <a href="{{ route('login') }}" class="btn btn-outline-dark me-3">Accedi</a>
+        <a href="{{ route('login') }}" class="btn btn-outline-dark me-3">{{__('ui.Accedi')}}</a>
     </div>
     
     @endguest 
     <li class="nav-item dropdown drop me-3">
         <a class="nav-link dropdown-toggle" id="navbarDropdownUser" role="button"
         data-bs-toggle="dropdown">
-        <i class="fa-solid fa-globe"></i> Seleziona la lingua
+        <i class="fa-solid fa-globe"></i> {{__('ui.Seleziona la lingua')}}
     </a>
     <!-- Menu a tendina per le lingue -->
     <ul class="dropdown-menu about languages-container" >

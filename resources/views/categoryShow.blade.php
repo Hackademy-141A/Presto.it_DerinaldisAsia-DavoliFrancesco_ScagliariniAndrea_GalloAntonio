@@ -14,20 +14,20 @@
                             <h5 class="card-title text-center">{{$announcement->title}}</h5>
                             <div class="clearfix mb-2">
                                 <span class="float-start badge rounded-pill bg-success">{{$announcement->price}}€</span> 
-                                <h5 class="card-title px-3">Pubblicato da: {{$announcement->user->name}}</h5>
+                                <h5 class="card-title px-3">{{__('ui.Publicato')}} : {{$announcement->user->name}}</h5>
                             </div>
-                            <h5 class="card-title text-center">Categoria: {{$announcement->category->name}}</h5>
+                            <h5 class="card-title text-center"> {{__('ui.Categoria')}} : {{$announcement->category->name}}</h5>
                             <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.</h5>
-                            <p class="card-text">Data di Pubblicazione: {{$announcement->created_at->format('d/m/Y')}}</p>
-                            <div class="d-grid gap-2 my-4"><a href="{{ route('announcements.show', compact('announcement')) }}"  class="btn btn-warning">Vai al dettaglio</a>
+                            <p class="card-text">{{__('ui.DataDiPubblicazione')}}: {{$announcement->created_at->format('d/m/Y')}}</p>
+                            <div class="d-grid gap-2 my-4"><a href="{{ route('announcements.show', compact('announcement')) }}"  class="btn btn-warning">{{__('ui.Vai al dettaglio')}}</a>
                             </div> 
                         </div>
                     </div> 
                 </div>
                 @empty
                 <div class="col-12 text-center"> <!-- Se non ci sono annunci, centra il testo -->
-                    <h2 class="text-center">Non sono ancora presenti degli annunci!</h2>
-                    <h3>Pubblicane uno: <a href="{{ route('create') }}">Nuovo annuncio</a></h3>
+                    <h2 class="text-center">{{__('ui.Non sono ancora presenti degli annunci!')}}</h2>
+                    <h3>{{__('ui.Pubblicane uno')}}: <a href="{{ route('create') }}">{{__('ui.Nuovo annuncio')}}</a></h3>
                 </div>
                 @endforelse
             </div>

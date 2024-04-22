@@ -1,6 +1,6 @@
 <x-layout>
     <!-- Intestazione dell'annuncio -->
-    <h2 class="text-center">Annuncio {{ $announcement->title }}</h2>
+    <h2 class="text-center">{{__('ui.Annuncio')}} {{ $announcement->title }}</h2>
     
     <div class="container">
         <div class="row">
@@ -32,14 +32,14 @@
                     <div class="card-body">
                         <!-- Informazioni sull'annuncio -->
                         <h3>Titolo: {{ $announcement->title }}</h3>
-                        <span class="card-text btn-warning p-1">Prezzo: {{ $announcement->price }}$</span>
-                        <p class="card-text mt-4">Categoria: {{ $announcement->category->name }}</p>
+                        <span class="card-text btn-warning p-1">{{__('ui.Prezzo')}}: {{ $announcement->price }}$</span>
+                        <p class="card-text mt-4">{{__('ui.Categoria')}}: {{ $announcement->category->name }}</p>
                         <p class="card-title">{{$announcement->description}}</p>
-                        <p class="card-text">Pubblicato il: {{ $announcement->created_at->format('d/m/Y') }}</p>
-                        <p class="card-text">Pubblicato da: {{ $announcement->user->name }}</p>
+                        <p class="card-text"> {{__('ui.Pubblicato')}}: {{ $announcement->created_at->format('d/m/Y') }}</p>
+                        <p class="card-text"> {{__('ui.Pubblicato')}}: {{ $announcement->user->name }}</p>
                         <!-- Pulsanti di navigazione -->
-                        <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}" class="btn mybtn">Vai alle categorie</a>
-                        <a href="{{ route('home') }}" class="btn btn-danger mt-2 mybtnone">Torna indietro</a>
+                        <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}" class="btn mybtn">{{__('ui.Vai alle categorie')}} </a>
+                        <a href="{{ route('home') }}" class="btn btn-danger mt-2 mybtnone">{{__('ui.Torna indietro')}}</a>
                     </div>
                 </div>
             </div>

@@ -11,23 +11,23 @@
                         <img src="https://picsum.photos/200/300" class="card-img-top" alt="Placeholder">
                         <div class="card-body">
                             <!-- Titolo dell'annuncio -->
-                            <h5 class="card-title">Titolo: {{ $announcement->title }}</h5>
+                            <h5 class="card-title">{{__('ui.Titolo')}}: {{ $announcement->title }}</h5>
                             <!-- Prezzo dell'annuncio -->
-                            <p class="card-text">Prezzo: {{ $announcement->price }}$</p>
+                            <p class="card-text">{{__('ui.Prezzo')}}:{{ $announcement->price }}$</p>
                             <!-- Descrizione dell'annuncio -->
-                            <p class="card-text">Descrizione: {{ $announcement->description }}</p>
+                            <p class="card-text">{{__('ui.Descrizione')}}: {{ $announcement->description }}</p>
                             <!-- Data di pubblicazione dell'annuncio -->
-                            <p class="card-text">Pubblicato il: {{ $announcement->created_at->format('d/m/Y') }}</p>
+                            <p class="card-text">{{__('ui.DataDiPubblicazione')}}: {{ $announcement->created_at->format('d/m/Y') }}</p>
                             <!-- Nome dell'utente che ha pubblicato l'annuncio -->
-                            <p class="card-text">Pubblicato da: {{ $announcement->user->name }}</p>
+                            <p class="card-text">{{__('ui.Publicato')}}: {{ $announcement->user->name }}</p>
                             <!-- Link per visualizzare i dettagli dell'annuncio -->
-                            <a href="{{ route('announcements.show', compact('announcement')) }}" class="btn btn-danger">Vai al dettaglio</a>
+                            <a href="{{ route('announcements.show', compact('announcement')) }}" class="btn btn-danger">{{__('ui.Vai al dettaglio')}}</a>
                         </div>
                     </div>
                 </div>
             @empty
                 <!-- Messaggio visualizzato se non ci sono annunci -->
-                <p class="col-12">Non hai ancora pubblicato niente</p>
+                <p class="col-12">{{__('ui.Non hai ancora pubblicato niente')}}</p>
             @endforelse
         </div>
     </div>
