@@ -82,11 +82,11 @@
                 <!-- Link per accedere al proprio profilo -->
                 <a class="dropdown-item" href="{{ route('profile.profile') }}">Profilo</a>
             </li>
-            <li class="my-2 revisor mx-2">
+            <li class="my-2 revisor mx-2 ">
                 
                 <!-- Se l'utente è un revisore, mostra il link alla sezione revisore -->
                 @if (Auth::user() && Auth::user()->is_revisor)
-                <a href="{{ route('revisor.index') }}" class="badge bg-dark me-3">Sei Revisore
+                <a href="{{ route('revisor.index') }}" class="badge bg-dark me-3">Da Revisionare
                     <span>{{ App\Models\Announcement::toBeRevisionedCount() }}</span>
                 </a>
                 @endif
@@ -114,7 +114,23 @@
 
 
 
-    <li class="nav-item dropdown drop">
+    
+
+
+   
+@endauth  
+
+<!-- Sezione per gli utenti non autenticati -->
+@guest
+<div class="d-flex">
+    <!-- Bottone per registrarsi -->
+    <a href="{{ route('register') }}" class="btn btn-outline-dark me-3">Registrati</a>
+    <!-- Bottone per accedere -->
+    <a href="{{ route('login') }}" class="btn btn-outline-dark me-3">Accedi</a>
+</div>
+
+@endguest 
+<li class="nav-item dropdown drop me-3">
         <a class="nav-link dropdown-toggle" id="navbarDropdownUser" role="button"
         data-bs-toggle="dropdown">
         <i class="fa-solid fa-globe"></i> Seleziona la lingua
@@ -139,22 +155,6 @@
        
     </ul>
 </li>
-
-
-   
-@endauth  
-
-<!-- Sezione per gli utenti non autenticati -->
-@guest
-<div class="d-flex">
-    <!-- Bottone per registrarsi -->
-    <a href="{{ route('register') }}" class="btn btn-outline-dark me-3">Registrati</a>
-    <!-- Bottone per accedere -->
-    <a href="{{ route('login') }}" class="btn btn-outline-dark">Accedi</a>
-</div>
-
-@endguest 
-
 
 
 </div>
