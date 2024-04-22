@@ -11,7 +11,7 @@ return [
 
     'motori' => 'engines',
 
-    'eletronica' =>  'electronics',
+    'elettronica' =>  'electronics',
 
     'giardinaggio' =>  'gardening',
 
@@ -28,6 +28,8 @@ return [
     'lavoro' =>  'work',
 
     'immobili' =>  'properties',
+
+    'Home' => 'home',
 
     'Annunci' =>  'Ads',
 

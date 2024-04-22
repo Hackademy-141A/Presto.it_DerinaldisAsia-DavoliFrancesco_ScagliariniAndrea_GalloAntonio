@@ -11,7 +11,7 @@ return [
 
     'motori' => 'motores',
 
-    'eletronica' =>  'electrónica',
+    'elettronica' =>  'electrónica',
 
     'giardinaggio' =>  'jardinería',
 
@@ -30,6 +30,8 @@ return [
     'immobili' =>  'propiedades',
 
     'Annunci' =>  'Anuncios',
+
+    'Home' => 'Hogar',
 
     'DataDiPubblicazione' =>  'fecha de publicación',
 

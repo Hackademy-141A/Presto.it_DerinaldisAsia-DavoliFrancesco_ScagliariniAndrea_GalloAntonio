@@ -11,7 +11,7 @@ return [
 
     'motori' => 'motori',
 
-    'eletronica' =>  'eletronica',
+    'elettronica' =>  'eletronica',
 
     'giardinaggio' =>  'giardinaggio',
 
@@ -29,7 +29,10 @@ return [
 
     'immobili' =>  'immobili',
 
+    'Home' => 'home',
+
     'Annunci' =>  'Annunci',
+
 
     'DataDiPubblicazione' =>  'Data di Publicazione',
 

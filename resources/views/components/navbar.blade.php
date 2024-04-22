@@ -18,7 +18,7 @@
             <!-- Link per la homepage -->
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('home') }}">
-                    <i class="fa-solid fa-house "></i> Home
+                    <i class="fa-solid fa-house "></i>{{__('ui.Home')}}
                 </a>
             </li>
             <!-- Link per gli annunci -->
@@ -61,7 +61,7 @@
                     @foreach ($categories as $category)
                     <li>
                         
-                        <a class="dropdown-item " href="{{ route('categoryShow', compact('category')) }}">{{ $category->name }}</a>
+                        <a class="dropdown-item " href="{{ route('categoryShow', compact('category')) }}">{{__('ui.'. $category->name )}}</a>
                         
                     </li>
                     @endforeach
