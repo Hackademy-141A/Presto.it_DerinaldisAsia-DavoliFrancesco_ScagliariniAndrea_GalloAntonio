@@ -20,7 +20,7 @@
                     <!-- Campo Titolo -->
                     <div class="mb-3">
                         <label for="title" class="form-label">{{__('ui.Titolo')}}</label>
-                        <input wire:model.blur='title' type="text" class="form-control @error('title') is-invalid @enderror" id="title">
+                        <input wire:model.live='title' type="text" class="form-control @error('title') is-invalid @enderror" id="title">
                         @error('title')
                         <div class="text-danger"> {{ $message }} </div>
                         @enderror
@@ -28,7 +28,7 @@
                     <!-- Campo Prezzo -->
                     <div class="mb-3">
                         <label for="price" class="form-label">{{__('ui.Prezzo')}}</label>
-                        <input wire:model.blur='price' type="number" class="form-control @error('price') is-invalid @enderror" id="price">
+                        <input wire:model.live='price' type="number" class="form-control @error('price') is-invalid @enderror" id="price">
                         @error('price')
                         <div class="text-danger"> {{ $message }} </div>
                         @enderror
@@ -36,7 +36,7 @@
                     <!-- Campo Descrizione -->
                     <div class="mb-3">
                         <label for="description" class="form-label">{{__('ui.Descrizione')}}</label>
-                        <textarea wire:model.blur='description' class="form-control @error('description') is-invalid @enderror" id="description" cols="30" rows="10"></textarea>
+                        <textarea wire:model.live='description' class="form-control @error('description') is-invalid @enderror" id="description" cols="30" rows="10"></textarea>
                         @error('description')
                         <div class="text-danger"> {{ $message }} </div>
                         @enderror
@@ -51,10 +51,42 @@
                             @endforeach
                         </select>
                     </div>
-                    <!-- Bottone di invio -->
-                    <button type="submit" class="btn btn-primary">{{__('ui.Invia')}}</button>
-                </form>
+                    <div class="mb-3">
+                        <div class="mb-3">
+                            <input wire:model="temporary_images" name="images" multiple
+                            class="form-control shadow @error('temporary_images.*')is-invalid
+                            @enderror"
+                            type="file" placeholder="Img" />
+                            @error('temporary_images.*')
+                            <p class="text-danger mt-2">{{ $messages }}</p>
+                            @enderror
+                        </div>
+                        @if (!empty($images))
+                        <div class="row">
+                            <div class="col-12">
+                                <p>anteprima immagine</p>
+                                <div class="row border border-4 border-info rounded shadow py-4">
+                                    
+                                    @foreach ($images as $key => $image)
+                                    
+                                    <div class="col my-3">
+                                        <div class="img-preview mx-auto shadow rounded"  style="background-image: url({{$image->temporaryUrl()}});">
+                                            
+                                        </div>
+                                        <button type="button"
+                                        class="btn btn-danger shadow d-block text-center mt-2 mx-auto"
+                                        wire:click="removeImage({{$key}})">Cancella</button>
+                                    </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                        @endif
+                        <!-- Bottone di invio -->
+                        <button type="submit" class="btn btn-primary">{{__('ui.Invia')}}</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    
