@@ -45,7 +45,7 @@
                       </div>
                     <!-- Dettagli dell'annuncio -->
                     <h5 class="text-dark mx-5 mt-2 text-center">Titolo: {{$announcement_to_check->title}}</h5>
-                    <p class="card-text text-dark mx-3">Pubblicato da : {{$announcement_to_check->user->name}}</p>
+                    <p class="card-text text-dark mx-3">Pubblicato da : {{$announcement_to_check->name}}</p>
                     <p class="card-text text-dark mx-3">Descrizione: {{$announcement_to_check->description}}</p>
                     <p class="text-dark mx-3">Data di creazione: {{$announcement_to_check->created_at->format('d/m/Y')}}</p>
                 </div>
