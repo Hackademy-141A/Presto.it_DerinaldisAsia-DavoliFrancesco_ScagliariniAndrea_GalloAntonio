@@ -8,7 +8,7 @@ return [
     'Categoria' => 'Category',
 
     'welcome' => 'Welcome',
-    
+
     'motori' => 'engines',
 
     'elettronica' =>  'electronics',
