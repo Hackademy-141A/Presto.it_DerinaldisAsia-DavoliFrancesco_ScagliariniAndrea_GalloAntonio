@@ -4,4 +4,8 @@
  
 return [
     'welcome' => 'Benvenuti sulla nostra applicazione ',
+    'motori' => 'motori',
+
+
+
 ];

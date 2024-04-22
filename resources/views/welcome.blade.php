@@ -53,7 +53,7 @@
                                         <span class="float-start badge rounded-pill bg-success">{{$announcement->price}}€</span> 
                                         <h5 class="card-title px-3">Pubblicato da: {{$announcement->user->name}}</h5>
                                     </div>
-                                    <h5 class="card-title text-center">Categoria: {{$announcement->category->name}}</h5>
+                                    <h5 class="card-title text-center">{{__('ui.categoria')}} : {{__('ui.'.$announcement->category->name)}}</h5>
                                     
                                     <p class="card-text">Data di Pubblicazione: {{$announcement->created_at->format('d/m/Y')}}</p>
                                     <div class="d-grid gap-2 my-4"><a href="{{ route('announcements.show', compact('announcement')) }}"  class="btn btn-warning">Vai al dettaglio</a>
