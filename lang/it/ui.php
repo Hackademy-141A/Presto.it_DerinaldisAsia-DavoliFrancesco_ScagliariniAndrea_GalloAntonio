@@ -108,6 +108,6 @@ return [
 
     'Digita qui per la ricerca' => 'Digita qui per la ricerca',
 
-    'lavora con noi' => 'work with us',
+    'lavora con noi' => 'Lavora con noi',
 
 ];

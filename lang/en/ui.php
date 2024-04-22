@@ -109,7 +109,7 @@ return [
 
      'Digita qui per la ricerca' => 'Type here to search',
 
-     'lavora con noi' => '',
+     'lavora con noi' => 'work with us',
 
 
      
