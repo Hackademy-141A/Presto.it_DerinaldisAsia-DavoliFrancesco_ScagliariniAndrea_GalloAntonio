@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-
+    
     <!-- 🌟 Tabella principale -->
     <table cellspacing="0" cellpadding="0" border="0" width="100%">
         <tr>
@@ -19,7 +19,7 @@
                             <!-- 🚀 Titolo -->
                             <h2 style="color: #333333;">Un utente ha chiesto di lavorare con noi</h2>
                             <!-- 📝 Paragrafi per i dati dell'utente -->
-                            <p style="color: #666666;">/p>
+                            
                             <p style="color: #666666;">Nome: {{$user->name}}</p>
                             <p style="color: #666666;">Email: {{$user->email}}</p>
                             <p style="color: #666666;">{{$body}}</p>

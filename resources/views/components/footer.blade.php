@@ -59,6 +59,11 @@ background: linear-gradient(117deg, rgba(246,182,18,1) 0%, rgba(108,237,255,1) 1
                             Iscriviti
                         </button>
                     </div>
+                    @auth
+                    <li>
+                        <a href="{{route('work.withus')}}">lavora con noi</a>
+                    </li>
+                    @endauth
                 </div>
                 <!-- Fine righe della griglia -->
             </form>
@@ -67,7 +72,7 @@ background: linear-gradient(117deg, rgba(246,182,18,1) 0%, rgba(108,237,255,1) 1
         <!-- Copyright -->
         <div class="text-center  p-0" style="background-color: rgba(0, 0, 0, 0.2)">
             © 2024 Copyright:
-            <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            <a class="text-dark" href="https://mdbootstrap.com/">PRESTO.IT</a>
         </div>
         <!-- Sezione: Links -->
         <section

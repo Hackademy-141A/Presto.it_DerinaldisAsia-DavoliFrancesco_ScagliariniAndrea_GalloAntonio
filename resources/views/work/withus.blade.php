@@ -11,7 +11,7 @@
     <div class="row justify-content-center">
         <!-- Colonna che occupa 12 unità su schermi piccoli e 5 unità su schermi medi -->
         <div class="col-12 col-md-5 text-center">
-            <form method="GET" action="{{ route('become.revisor') }}">
+            <form method="GET" action="{{ route('become.revisor') }} ">
                 @csrf <!-- Protezione CSRF -->
 
                 <!-- Campo per l'inserimento dell'email -->
@@ -28,12 +28,12 @@
 
                 <!-- Campo per l'inserimento del messaggio -->
                 <div class="mb-3">
-                    <label for="inputMessage" class="form-label">Inserisci il tuo messaggio</label>
+                    <label for="inputMessage" class="form-label">Perchè dovremmo assumerti?</label>
                     <textarea name="body" type="text" class="form-control" id="inputMessage" cols="30" rows="10"></textarea>
                 </div>
 
                 <!-- Pulsante di invio del messaggio -->
-                <button type="submit" class="btn btn-primary">Invia il messaggio</button>
+                <button type="submit" class="btn btn-warning">Invia la richiesta</button>
             </form>
         </div>
     </div>
