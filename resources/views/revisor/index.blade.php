@@ -44,10 +44,10 @@
                         </button>
                     </div>
                     <!-- Dettagli dell'annuncio -->
-                    <h5 class="text-dark mx-5 mt-2 text-center">Titolo: {{$announcement_to_check->title}}</h5>
-                    <p class="card-text text-dark mx-3">Pubblicato da : {{$announcement_to_check->name}}</p>
-                    <p class="card-text text-dark mx-3">Descrizione: {{$announcement_to_check->description}}</p>
-                    <p class="text-dark mx-3">Data di creazione: {{$announcement_to_check->created_at->format('d/m/Y')}}</p>
+                    <h5 class="text-dark mx-5 mt-2 text-center">{{__('ui.Titolo')}}: {{$announcement_to_check->title}}</h5>
+                    <p class="card-text text-dark mx-3">{{__('ui.Publicato')}} : {{$announcement_to_check->name}}</p>
+                    <p class="card-text text-dark mx-3">{{__('ui.Descrizione')}} : {{$announcement_to_check->description}}</p>
+                    <p class="text-dark mx-3">{{__('ui.Data di creazione')}} : {{$announcement_to_check->created_at->format('d/m/Y')}}</p>
                 </div>
             </div>
             
@@ -58,7 +58,7 @@
                         <form action="{{ route('revisor.accept', ['announcement' => $announcement_to_check]) }}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button type="submit" class="btn btn-success shadow">Accetta</button>
+                            <button type="submit" class="btn btn-success shadow">{{__('ui.Accetta')}} </button>
                         </form>
                     </div>
                     <div class="col-md-1 text-center buttontwo">
@@ -66,7 +66,7 @@
                         <form action="{{ route('revisor.reject', ['announcement' => $announcement_to_check]) }}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
+                            <button type="submit" class="btn btn-danger shadow"> {{__('ui.Rifiuta')}}</button>
                         </form>
                     </div>
                 </div>

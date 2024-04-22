@@ -19,33 +19,33 @@
                 <form wire:submit='store' enctype="multipart/form-data">
                     <!-- Campo Titolo -->
                     <div class="mb-3">
-                        <label for="title" class="form-label">Titolo</label>
-                        <input wire:model.live='title' type="text" class="form-control " @error('title') is-invalid @enderror id="title">
+                        <label for="title" class="form-label">{{__('ui.Titolo')}}</label>
+                        <input wire:model.live='title' type="text" class="form-control @error('title') is-invalid @enderror" id="title">
                         @error('title')
                         <div class="text-danger"> {{ $message }} </div>
                         @enderror
                     </div>
                     <!-- Campo Prezzo -->
                     <div class="mb-3">
-                        <label for="price" class="form-label">Prezzo</label>
-                        <input wire:model.live='price' type="number" class="form-control " @error('price') is-invalid @enderror id="price">
+                        <label for="price" class="form-label">{{__('ui.Prezzo')}}</label>
+                        <input wire:model.live='price' type="number" class="form-control @error('price') is-invalid @enderror" id="price">
                         @error('price')
                         <div class="text-danger"> {{ $message }} </div>
                         @enderror
                     </div>
                     <!-- Campo Descrizione -->
                     <div class="mb-3">
-                        <label for="description" class="form-label">Descrizione dell'articolo</label>
-                        <textarea wire:model.live='description' class="form-control " @error('description') is-invalid @enderror id="description" cols="30" rows="10"></textarea>
+                        <label for="description" class="form-label">{{__('ui.Descrizione')}}</label>
+                        <textarea wire:model.live='description' class="form-control @error('description') is-invalid @enderror" id="description" cols="30" rows="10"></textarea>
                         @error('description')
                         <div class="text-danger"> {{ $message }} </div>
                         @enderror
                     </div>
                     <!-- Campo Categoria -->
                     <div class="mb-3">
-                        <label for="category">Categoria</label>
+                        <label for="category">{{__('ui.Categoria')}}</label>
                         <select wire:model.defer="category" id="category" class="form-control">
-                            <option value="">Scegli la categoria</option>
+                            <option value="">{{__('ui.Scegli la categoria')}}</option>
                             @foreach($categories as $category)
                             <option value="{{$category->id}}">{{$category->name}}</option>
                             @endforeach
@@ -83,7 +83,7 @@
                         </div>
                         @endif
                         <!-- Bottone di invio -->
-                        <button type="submit" class="btn btn-primary">Invia</button>
+                        <button type="submit" class="btn btn-primary">{{__('ui.Invia')}}</button>
                     </form>
                 </div>
             </div>

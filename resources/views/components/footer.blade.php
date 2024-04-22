@@ -50,7 +50,7 @@ background: linear-gradient(117deg, rgba(246,182,18,1) 0%, rgba(108,237,255,1) 1
                     <div class="col-md-5 col-12">
                         <div class="form-outline mb-4">
                             <input type="email" id="form5Example2" class="form-control" />
-                            <label class="form-label" for="form5Example2">Indirizzo email</label>
+                            <label class="form-label" for="form5Example2"> Email</label>
                         </div>
                     </div>
                     <!-- Pulsante di invio -->
@@ -61,7 +61,7 @@ background: linear-gradient(117deg, rgba(246,182,18,1) 0%, rgba(108,237,255,1) 1
                     </div>
                     @auth
                     <li>
-                        <a href="{{route('work.withus')}}">lavora con noi</a>
+                        <a href="{{route('work.withus')}}">{{__('ui.lavora con noi')}}</a>
                     </li>
                     @endauth
                 </div>

@@ -27,8 +27,8 @@
                                         @csrf
                                         <!-- Campo Nome -->
                                         <div class="mb-3">
-                                            <label for="name" class="form-label">Nome</label>
-                                            <input name="name" placeholder="Nome" type="text" class="form-control" id="name">
+                                            <label for="name" class="form-label">{{__('ui.Nome')}}</label>
+                                            <input name="name" placeholder="{{__('ui.Nome')}}" type="text" class="form-control" id="name">
                                         </div>
                                         <!-- Campo Email -->
                                         <div class="mb-3">
@@ -41,7 +41,7 @@
                                             <!-- Input password con icona per mostrare/nascondere la password -->
                                             <div class="input-group">
                                                 <input name="password" placeholder="Password" type="password" class="form-control" id="password">
-                                                <button class="btn btn-warning" type="button" onclick="togglePassword()">Mostra</button>
+                                                <button class="btn btn-warning" type="button" onclick="togglePassword()">{{__('ui.Mostra')}}</button>
                                                     <!-- Icona per mostrare/nascondere la password -->
                                                     <i class="bi bi-eye"></i>
                                                 </button>
@@ -51,11 +51,11 @@
                                         <!-- Conferma Password -->
 
                                         <div class="mb-3">
-                                            <label for="password_confirmation" class="form-label">Conferma Password</label>
+                                            <label for="password_confirmation" class="form-label">{{__('ui.Conferma Password')}}</label>
                                             <!-- Input password con icona per mostrare/nascondere la password -->
                                             <div class="input-group">
-                                                <input name="password_confirmation" placeholder="Conferma Password" type="password" class="form-control" id="password_confirmation">
-                                                <button class="btn btn-warning" type="button" onclick="togglePassword()">Mostra</button>
+                                                <input name="password_confirmation" placeholder="{{__('ui.Conferma Password')}}" type="password" class="form-control" id="password_confirmation">
+                                                <button class="btn btn-warning" type="button" onclick="togglePassword()">{{__('ui.Mostra')}}</button>
                                                     <!-- Icona per mostrare/nascondere la password -->
                                                     <i class="bi bi-eye"></i>
                                                 </button>
@@ -65,7 +65,7 @@
 
 
                                         <!-- Bottone di registrazione -->
-                                        <button type="submit" class="btn btn-warning mt-3">Registrati</button>
+                                        <button type="submit" class="btn btn-warning mt-3">{{__('ui.Registrati')}}</button>
                                     </form>
                                 </div>
                             </div>
