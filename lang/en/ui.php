@@ -5,7 +5,7 @@
 return [
     'Categorie' => 'Categories',
 
-    'Categoria' => 'Categorie',
+    'Categoria' => 'Category',
 
     'welcome' => 'Welcome',
 
