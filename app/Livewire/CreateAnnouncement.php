@@ -117,7 +117,7 @@ class CreateAnnouncement extends Component
     {
         if(
             $this->validate([
-                'temporary_images.*' => 'image|max:1024',
+                'temporary_images.*' => 'image|max:2000',
                 ])
                 ){
                     foreach ($this->temporary_images as $image) {

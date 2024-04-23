@@ -275,10 +275,10 @@ footer {
 }
 
 .img-preview{
-height: 300px;
-width: 300px;
+height: 500px;
+width: 500px;
 background-repeat: no-repeat ;
-background-size:auto;
+background-size:contain;
 }
 
 .page-holder {
@@ -290,7 +290,18 @@ background-size:auto;
   background-size: cover !important;
 }
 
-
+.animated-title3 {
+  font-size: 30px;
+  background-image: linear-gradient(to left, #4014c4, #04454d); 
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: #ffffff; 
+  text-shadow: 4px 6px 3px rgba(0, 84, 112, 0.879);
+  background-size: cover;
+  letter-spacing: 5px;
+} 
 
 .animated-title {
   font-size: 70px;
@@ -433,4 +444,17 @@ button {
 
 .imgheader {
   margin-top: 80px;
+}
+
+.customfooter:hover{
+  border-bottom: white 2px solid;
+  margin-bottom: 5px;
+  background-color: #ffeb3b; 
+  color: black !important;
+  
+
+
+
+
+
 }
