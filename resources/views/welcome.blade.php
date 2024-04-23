@@ -1,6 +1,6 @@
 <x-layout>
     <x-header></x-header>
-    <x-research></x-research>
+   
     <div class="container">
         <div class="row">
             <div class="col-12 mt-3">
@@ -39,13 +39,14 @@
                 <div class="container d-flex justify-content-center">
                     <div class="row text-center">
                         
-                        <h2  class="display-1 animated-title">{{__('ui.welcome')}}</h2>
+                        {{-- <h2  class="display-1 animated-title">{{__('ui.welcome')}}</h2> --}}
                         
-                        
+                        <h2 class="text-center animated-title2">I nostri ultimi annunci</h2>
                         
                         @foreach ($announcements as $announcement)
                         <!-- Ciclo attraverso gli annunci -->
                         <div class="col-12 col-md-4 py-4"> <!-- Colonne per gestire il layout responsivo -->
+                           
                             <div class="card h-100 shadow-sm"> 
                                 <img src={{!$announcement->images()->get()->isEmpty() ?  $announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/800/603'}} class="card-img-top" alt="...">
                                 <div class="card-body"> 
@@ -66,6 +67,16 @@
                         @endforeach
                     </div>
                 </div>
+
+               
+                <x-aboutUs
+                
+                
+                
+                
+                />
+
+               
             </div>
         </div>
     </div>

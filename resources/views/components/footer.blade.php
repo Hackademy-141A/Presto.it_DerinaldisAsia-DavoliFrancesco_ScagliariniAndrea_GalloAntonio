@@ -1,6 +1,6 @@
 <!-- Footer -->
 <footer class="text-center" style=" background: rgb(246,182,18);
-background: linear-gradient(117deg, rgba(246,182,18,1) 0%, rgba(108,237,255,1) 100%);">
+background: linear-gradient(117deg, #ffeb3b 0%, #4caf50 100%);">
     <!-- Sezione per eventuali messaggi di errore -->
     @if (session('access.denied'))
         <div class="alert alert-danger">

@@ -56,6 +56,8 @@ return [
 
     'Ricerca' => 'Ricerca',
 
+    'team' => 'chi siamo',
+
     'Diventa revisore' => 'Diventa revisore',
 
     'Crea annunci' => 'Crea annunci',

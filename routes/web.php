@@ -34,3 +34,4 @@ Route::post('/contact-us/submit', [RevisorController::class, 'submit'])->name('c
 Route::get('/ricerca/annuncio',[PublicController::class,'searchAnnouncement'])->name('announcement.search');
 // rotta lingue
 Route::post('/lingua/{lang}',[PublicController::class,'setLanguage'])->name('set_language_locale');
+

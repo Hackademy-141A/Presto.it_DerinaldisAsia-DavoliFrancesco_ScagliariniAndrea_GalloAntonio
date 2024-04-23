@@ -53,6 +53,8 @@ return [
 
     'Digita qui per la ricerca' => 'Escriba aquí para buscar',
 
+    'team' => 'quienes somos',
+
     'Ricerca' => 'Investigación',
 
     'Diventa revisore' => 'Conviértete en crítico',
