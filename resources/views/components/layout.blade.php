@@ -12,7 +12,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
-<body>
+<body style="background: linear-gradient(to right,#5ca45eb5, #faeb66ad) !important">
     <!-- Navbar -->
     <x-navbar />
     

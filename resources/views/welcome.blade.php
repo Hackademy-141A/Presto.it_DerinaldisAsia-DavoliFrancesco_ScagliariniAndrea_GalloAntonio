@@ -1,4 +1,5 @@
 <x-layout>
+    <x-header></x-header>
     <x-research></x-research>
     <div class="container">
         <div class="row">
