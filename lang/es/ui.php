@@ -83,7 +83,7 @@ return [
 
     'Non sono ancora presenti degli annunci!' => '¡Aún no hay anuncios!',
 
-    'Pubblicane uno:' => 'Publicar uno:',
+    'Pubblicane uno' => 'Publicar uno:',
 
     'Nuovo annuncio' => 'Nuevo anuncio',
 

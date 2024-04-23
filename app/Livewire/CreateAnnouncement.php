@@ -5,11 +5,14 @@ namespace App\Livewire;
 use App\Models\User;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
+use Illuminate\Validation;
 use App\Models\Announcement;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Livewire\Features\SupportFileUploads\WithFileUploads;
-use Illuminate\Validation;
+
 class CreateAnnouncement extends Component
 {
     
@@ -60,12 +63,12 @@ class CreateAnnouncement extends Component
     
     public function store(){
         $this->validate();
-          
-    
         
-       
         
-        $announcement= Category::find($this->category)->announcements()->create([
+        
+        
+        
+        $this->announcement= Category::find($this->category)->announcements()->create([
             
             
             'title' => $this->title,
@@ -77,20 +80,24 @@ class CreateAnnouncement extends Component
             
         ]);
         
-        if (count($this->images)) {
-
-            foreach ($this->images as $image) {
-
-                $announcement->images()->create(['path' => $image->store('images', 'public')]);
-
-               
-
-
-       }
-       }        
-
-        Auth::user()->announcements()->save($announcement);
-       
+        if(count($this->images)){
+            foreach($this->images as $image){
+                // $this->announcement->images()->create(['path'=>$image->store('images','public')]);
+                $newFileName = "announcement/{$this->announcement->id}";
+                $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
+                
+                dispatch(new ResizeImage($newImage->path, 400 , 300 ));
+                
+            }
+            
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
+            
+        }
+        
+        $this->announcement->user()->associate(Auth::user());
+        
+        $this->announcement->save();
+        
         
         
         $this->cleanForm();
@@ -109,29 +116,30 @@ class CreateAnnouncement extends Component
     public function updatedTemporaryImages()
     {
         if(
-        $this->validate([
-            'temporary_images.*' => 'image|max:1024',
-        ])
-        ){
-        foreach ($this->temporary_images as $image) {
-            $this->images[] = $image;
+            $this->validate([
+                'temporary_images.*' => 'image|max:1024',
+                ])
+                ){
+                    foreach ($this->temporary_images as $image) {
+                        $this->images[] = $image;
+                    }
+                }
+            }
+            
+            public function removeImage($key)
+            {
+                if (in_array($key, array_keys($this->images))) {
+                    unset($this->images[$key]);
+                }
+            }
+            
+            
+            
+            public function render()
+            {
+                return view('livewire.create-announcement');
+            }
+            
+            
         }
-        }
-    }
-    
-    public function removeImage($key)
-    {
-        if (in_array($key, array_keys($this->images))) {
-            unset($this->images[$key]);
-        }
-    }
-    
-    
-    
-    public function render()
-    {
-        return view('livewire.create-announcement');
-    }
-    
-    
-}
+        

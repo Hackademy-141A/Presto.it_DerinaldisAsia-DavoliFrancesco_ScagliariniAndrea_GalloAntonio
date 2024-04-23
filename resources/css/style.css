@@ -272,8 +272,8 @@ footer {
 }
 
 .img-preview{
-height: 200px;
-width: 200px;
-
-
+height: 300px;
+width: 300px;
+background-repeat: no-repeat ;
+background-size:auto;
 }

@@ -46,7 +46,7 @@
                         <!-- Ciclo attraverso gli annunci -->
                         <div class="col-12 col-md-4 py-4"> <!-- Colonne per gestire il layout responsivo -->
                             <div class="card h-100 shadow-sm"> 
-                                <img src="https://picsum.photos/300/300" class="card-img-top" alt="...">
+                                <img src={{!$announcement->images()->get()->isEmpty() ?  $announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/800/603'}} class="card-img-top" alt="...">
                                 <div class="card-body"> 
                                     <h5 class="card-title text-center">{{$announcement->title}}</h5>
                                     <div class="clearfix mb-2">

@@ -24,10 +24,10 @@
                     <!-- Carousel per le immagini dell'annuncio -->
                     <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
                         @if($announcement_to_check->images)
-                        <div class="carousel-inner">
+                        <div class="carousel-inner ">
                             @foreach ($announcement_to_check->images as $image)
-                            <div class="carousel-item active">
-                                <img src="{{Storage::url($image->path)}}" class="img-fluid" alt="">
+                            <div class="carousel-item  @if($loop->first)active @endif">
+                                <img src="{{$announcement->images()->first()->getUrl(400,300)}}" class="img-fluid customcarouselimg " alt="">
                             </div>
                             
                             @endforeach

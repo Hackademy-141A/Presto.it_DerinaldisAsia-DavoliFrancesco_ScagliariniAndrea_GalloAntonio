@@ -83,7 +83,7 @@ return [
 
     'Non sono ancora presenti degli annunci!' => 'There are no ads yet!',
 
-    'Pubblicane uno:' => 'Post one:',
+    'Pubblicane uno' => 'Post one:',
 
     'Nuovo annuncio' => 'New announcement',
 

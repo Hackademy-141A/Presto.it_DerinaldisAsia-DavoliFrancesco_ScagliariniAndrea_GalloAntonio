@@ -84,7 +84,7 @@ return [
 
     'Non sono ancora presenti degli annunci!' => 'Non sono ancora presenti degli annunci!',
 
-    'Pubblicane uno:' => 'Pubblicane uno:',
+    'Pubblicane uno' => 'Pubblicane uno:',
 
     'Nuovo annuncio' => 'Nuovo annuncio',
 

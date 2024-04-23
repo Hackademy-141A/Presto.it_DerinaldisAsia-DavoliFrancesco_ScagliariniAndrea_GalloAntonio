@@ -8,7 +8,7 @@
                     <div class="card h-100 shadow-sm"> 
                         <div class="card-img">
 
-                            <img src="https://picsum.photos/800/600" class="card-img-top" alt="...">
+                            <img src={{!$announcement->images()->get()->isEmpty() ?  $announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/800/603'}} class="card-img-top" alt="...">
                         </div>
                         <div class="card-body"> 
                             <h5 class="card-title text-center">{{$announcement->title}}</h5>
@@ -27,7 +27,7 @@
                 @empty
                 <div class="col-12 text-center"> <!-- Se non ci sono annunci, centra il testo -->
                     <h2 class="text-center">{{__('ui.Non sono ancora presenti degli annunci!')}}</h2>
-                    <h3>{{__('ui.Pubblicane uno')}}: <a href="{{ route('create') }}">{{__('ui.Nuovo annuncio')}}</a></h3>
+                    <h3>{{__('ui.Pubblicane uno')}}  <a href="{{ route('create') }}">{{__('ui.Nuovo annuncio')}}</a></h3>
                 </div>
                 @endforelse
             </div>
