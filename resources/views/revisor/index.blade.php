@@ -27,7 +27,7 @@
                         <div class="carousel-inner ">
                             @foreach ($announcement_to_check->images as $image)
                             <div class="carousel-item  @if($loop->first)active @endif">
-                                <img src="{{$announcement->images()->first()->getUrl(400,300)}}" class="img-fluid customcarouselimg " alt="">
+                                <img src="{{$announcement_to_check->images()->first()->getUrl(400,300)}}" class="img-fluid customcarouselimg " alt="">
                             </div>
                             
                             @endforeach
