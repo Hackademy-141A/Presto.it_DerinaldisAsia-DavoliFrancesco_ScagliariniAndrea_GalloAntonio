@@ -292,30 +292,29 @@ background-size:auto;
 
 
 
-
-  .animated-title {
-  font-size: 50px;
-  background-image: linear-gradient(to top, #ffffff, #13d0e6); /* Cambia il colore del gradient come preferisci */
+.animated-title {
+  font-size: 70px;
+  background-image: linear-gradient(to top, #ffffff, #04454d); 
  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
   -webkit-text-stroke-width: 4px;
-  -webkit-text-stroke-color: #030303; 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  background-size: cover;
-}  
-
-.animated-title2 {
-  font-size: 50px;
-  background-image: linear-gradient(to top, #ffffff, #350ca8); /* Cambia il colore del gradient come preferisci */
- -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-  -webkit-text-stroke-width: 4px;
-  -webkit-text-stroke-color: #030303; 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke-color: #bdeafd; 
+  text-shadow: 3px 6px 4px rgba(0, 84, 112, 0.879);
   background-size: cover;
 } 
+
+.animated-title2 {
+  font-size: 60px;
+  background-image: linear-gradient(to top, #ffffff, #350ca8);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: #3a2c47; 
+  text-shadow: 3px 6px 4px rgb(195, 81, 0);
+  background-size: cover;
+}
 
 .button-container {
   position: absolute;

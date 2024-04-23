@@ -7,7 +7,7 @@ return [
 
     'Categoria' => 'Category',
 
-    'welcome' => 'Welcome',
+    'welcome' => 'Welcome to Presto.it',
 
     'motori' => 'engines',
 
