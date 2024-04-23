@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12 mt-2">
-            <h2 class="text-center title animated-title">{{__('ui.team')}}</h2>
+            <h2 class="text-center title animated-title2">{{__('ui.team')}}</h2>
         </div>
     </div>
 </div>
