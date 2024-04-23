@@ -6,7 +6,7 @@
                 <!-- Bottone per la ricerca -->
                 <input name="searched" class="form-control me-2 text-center" type="search" placeholder="{{__('ui.Digita qui per la ricerca')}}"
                     aria-label="search">
-                <button class="btn btn-warning" type="submit">{{__('ui.Ricerca')}}</button>
+                <button class="btn btn-warning p-3 mr-3" type="submit">{{__('ui.Ricerca')}}</button>
             </form>
         </div>
     </div>

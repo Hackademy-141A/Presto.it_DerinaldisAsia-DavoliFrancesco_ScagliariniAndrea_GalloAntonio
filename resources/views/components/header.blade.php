@@ -20,12 +20,12 @@
             <x-research></x-research>
       </div>
     </div> --}}
-    <div style="background: url(https://bootstrapious.com/i/snippets/sn-bg-image/bg.jpg)" class="page-holder bg-cover">
+    <div style="background: url(/img/sfondo.jpg)" class="page-holder bg-cover imgheader">
 
-        <div class="container py-5">
+        <div class="container mb-4 py-5">
           <header class="text-center text-white py-5">
             <h2  class="display-1 animated-title">{{__('ui.welcome')}}</h2>
-            <div class="col-12 d-flex justify-content-center"><x-research></x-research></p>
+            <div class="col-12 d-flex justify-content-center"><x-research></x-research></div>
            
           </header>
       

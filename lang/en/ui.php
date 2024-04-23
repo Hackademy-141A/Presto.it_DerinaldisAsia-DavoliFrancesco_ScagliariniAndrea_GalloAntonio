@@ -55,6 +55,8 @@ return [
 
     'Ricerca' => 'Research',
 
+    'our latest announcements' =>  'latest announcements',
+
     'team' => 'who we are',
 
     'Diventa revisore' => 'Become a reviewer',

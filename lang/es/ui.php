@@ -53,7 +53,10 @@ return [
 
     'Digita qui per la ricerca' => 'Escriba aquí para buscar',
 
+    'our latest announcements' =>  'últimos anuncios',
+
     'team' => 'quienes somos',
+
 
     'Ricerca' => 'Investigación',
 
