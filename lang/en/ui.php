@@ -7,7 +7,7 @@ return [
 
     'Categoria' => 'Category',
 
-    'welcome' => 'Welcome',
+    'welcome' => 'Welcome to Presto.it',
 
     'motori' => 'engines',
 
@@ -54,6 +54,10 @@ return [
     'Digita qui per la ricerca' => 'Type here to search',
 
     'Ricerca' => 'Research',
+
+    'our latest announcements' =>  'latest announcements',
+
+    'team' => 'who we are',
 
     'Diventa revisore' => 'Become a reviewer',
 

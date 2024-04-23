@@ -1,4 +1,5 @@
 <x-layout>
+    <h2 class="text-center display-1">Il mio profilo</h2>
     <div class="container">
         
         

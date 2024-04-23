@@ -13,7 +13,9 @@
             <div class="carousel-inner ">
               @foreach ($announcement->images as $image)
               <div class="carousel-item  @if($loop->first)active @endif">
+                
                 <img src="{{$announcement->images()->first()->getUrl(400,300)}} " class="card-img-top customcarouselimg " alt="">
+                <span class="card-text btn-warning p-1 mb-5">{{__('ui.Prezzo')}}: {{ $announcement->price }}$</span>
               </div>
               
               @endforeach
@@ -46,13 +48,13 @@
           <div class="card-body">
             <!-- Informazioni sull'annuncio -->
             <h3>Titolo: {{ $announcement->title }}</h3>
-            <span class="card-text btn-warning p-1">{{__('ui.Prezzo')}}: {{ $announcement->price }}$</span>
-            <p class="card-text mt-4">{{__('ui.Categoria')}}: {{ $announcement->category->name }}</p>
+           
+            <a class="text-decoration-none text-dark" href="{{ route('categoryShow', ['category' => $announcement->category]) }}"><p class="card-text mt-4 myanchor">{{__('ui.Categoria')}}: {{ $announcement->category->name }}</p></a>
             <p class="card-title">{{$announcement->description}}</p>
             <p class="card-text"> {{__('ui.Publicato')}}: {{ $announcement->created_at->format('d/m/Y') }}</p>
             <p class="card-text"> {{__('ui.Publicato')}}: {{ $announcement->user->name }}</p>
             <!-- Pulsanti di navigazione -->
-            <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}" class="btn mybtn">{{__('ui.Vai alle categorie')}} </a>
+            {{-- <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}" class="btn mybtn">{{__('ui.Vai alle categorie')}}  --}}
             <a href="{{ route('home') }}" class="btn btn-danger mt-2 mybtnone">{{__('ui.Torna indietro')}}</a>
           </div>
         </div>

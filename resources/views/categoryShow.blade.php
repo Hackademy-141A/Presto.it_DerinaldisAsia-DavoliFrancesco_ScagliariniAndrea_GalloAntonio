@@ -1,10 +1,13 @@
 <x-layout>
+   
     <main>
         <div class="container-fluid bg-trasparent my-4 p-3">
         
             <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3"> <!-- Riga centrata orizzontalmente -->
                 @forelse ($category->announcements as $announcement)
+                
                 <div class="col-12 col-md-4"> <!-- Colonne per gestire il layout responsivo -->
+                  
                     <div class="card h-100 shadow-sm"> 
                         <div class="card-img">
 

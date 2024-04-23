@@ -7,7 +7,7 @@ return [
 
     'Categoria' => 'Categoria',
 
-    'welcome' => 'benvenuto',
+    'welcome' => 'Benvenuto su Presto.it',
 
     'motori' => 'motori',
 
@@ -55,6 +55,10 @@ return [
     'Digita qui per la ricerca ' => 'Digita qui per la ricerca',
 
     'Ricerca' => 'Ricerca',
+    
+    'our latest announcements' =>  'i nostri ultimi annunci',
+
+    'team' => 'chi siamo',
 
     'Diventa revisore' => 'Diventa revisore',
 

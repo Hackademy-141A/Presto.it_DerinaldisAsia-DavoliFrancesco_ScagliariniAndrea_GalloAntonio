@@ -7,7 +7,7 @@ return [
 
     'Categorie' => 'Categorías',
 
-    'welcome' => 'bienvenido',
+    'welcome' => 'Bienvenido en Presto.it',
 
     'motori' => 'motores',
 
@@ -52,6 +52,11 @@ return [
     'Iscriviti' => 'Suscríbete',
 
     'Digita qui per la ricerca' => 'Escriba aquí para buscar',
+
+    'our latest announcements' =>  'últimos anuncios',
+
+    'team' => 'quienes somos',
+
 
     'Ricerca' => 'Investigación',
 
