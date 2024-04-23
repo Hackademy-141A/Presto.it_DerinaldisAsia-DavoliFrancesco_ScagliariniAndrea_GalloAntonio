@@ -4,7 +4,7 @@
         <div class="row text-center">
             <!-- Titolo e link per creare un nuovo annuncio -->
             
-            <button class="dropdown-item1 mt-3" href="{{route('create')}}"><h2>{{__('ui.Publica Nuovo Annuncio')}} </h2></button>
+            <a class="text-decoration-none"  href="{{ route('create') }}"><button class="dropdown-item1 mt-3"><h2>{{__('ui.Publica Nuovo Annuncio')}}</h2></button></a> 
             <div class="col-12 text-center">
                 <div class="row">
                     <!-- Ciclo attraverso gli annunci -->
@@ -16,7 +16,7 @@
                                 <h5 class="card-title text-center">{{$announcement->title}}</h5>
                                 <div class="clearfix mb-2">
                                     <span class="float-start badge rounded-pill bg-success">{{$announcement->price}}€</span> 
-                                    <h5 class="card-title px-3"> {{__('ui.Publicato')}}: {{$announcement->user->name}}</h5>
+                                    <h5 class="card-title px-3"> {{__('ui.Publicato')}} : {{ $announcement->user->name }}</h5>
                                 </div>
                                 <h5 class="card-title text-center">{{__('ui.Categoria')}}: {{$announcement->category->name}}</h5>
                                 <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.</h5>
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     @endforelse
-                   
+                    
                 </div>
             </div>
         </div>

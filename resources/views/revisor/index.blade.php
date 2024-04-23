@@ -23,7 +23,18 @@
                 <div class="card prova">
                     <!-- Carousel per le immagini dell'annuncio -->
                     <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
+                        @if($announcement_to_check->images)
                         <div class="carousel-inner">
+                            @foreach ($announcement_to_check->images as $image)
+                            <div class="carousel-item active">
+                                <img src="{{Storage::url($image->path)}}" class="img-fluid" alt="">
+                            </div>
+                            
+                            @endforeach
+                        </div>
+                        @else
+                        <div class="carousel-inner">
+                            
                             <div class="carousel-item active">
                                 <img src="https://picsum.photos/800/601" class="d-block w-100" alt="...">
                             </div>
@@ -34,6 +45,9 @@
                                 <img src="https://picsum.photos/800/603" class="d-block w-100" alt="...">
                             </div>
                         </div>
+                        
+                        @endif
+                        
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>

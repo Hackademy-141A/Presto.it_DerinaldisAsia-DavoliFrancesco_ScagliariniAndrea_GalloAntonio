@@ -65,7 +65,7 @@ return [
 
     'Da Revisionare' => 'Para ser revisado',
 
-    'Publicato' => 'Publicado',
+    'Publicato' => 'Publicado da',
 
     'Descrizione' => 'Descripción',
 

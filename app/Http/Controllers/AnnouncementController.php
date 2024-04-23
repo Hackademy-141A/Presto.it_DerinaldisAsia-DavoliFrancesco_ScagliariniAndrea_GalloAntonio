@@ -13,12 +13,12 @@ class AnnouncementController extends Controller
         
     }
     public function showAnnouncement (Announcement $announcement) {
-       
+        
         return view('annunci.show',compact('announcement'));
     }
     public function index (Announcement $announcement) {
-      
-        $announcements = Announcement::paginate(10);
+        $announcements=Announcement::where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(6);
+        
         return view('annunci.index',compact('announcements'));
     }
 }
