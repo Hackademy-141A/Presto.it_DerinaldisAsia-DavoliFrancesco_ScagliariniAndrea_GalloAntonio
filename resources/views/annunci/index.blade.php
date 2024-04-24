@@ -5,7 +5,7 @@
             <!-- Titolo e link per creare un nuovo annuncio -->
             
             <a class="text-decoration-none"  href="{{ route('create') }}"><button class="dropdown-item1 mt-3"><h2>{{__('ui.Publica Nuovo Annuncio')}}</h2></button></a> 
-            <div class="col-12 text-center">
+            <div class="col-12 text-center abc">
                 <div class="row">
                     <!-- Ciclo attraverso gli annunci -->
                     @forelse ($announcements as $announcement)
