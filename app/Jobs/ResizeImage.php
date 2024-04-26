@@ -48,6 +48,8 @@ private $path;
          
         $croppedImage = SpatieImage::load($srcPath)
             ->crop(Manipulations::CROP_CENTER, $w, $h)
+            ->watermark(public_path('/img/logo_presto.png'))
+            ->watermarkPosition(Manipulations::POSITION_BOTTOM_LEFT)
             ->save($destPath);
 
     }

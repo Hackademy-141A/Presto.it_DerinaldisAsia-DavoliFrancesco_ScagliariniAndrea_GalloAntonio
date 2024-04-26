@@ -4,7 +4,7 @@
     <nav class="navbar navbar-expand-lg bg-navbar bg-dark fixed-top mynavbar">
         <!-- Logo del sito nella navbar -->
         <a class="navbar-brand" href="{{ route('home') }}">
-            <img id="logo" class="imagelogo" src="/img/Senza_titolo_5.png" alt="logo del sito">
+            <img id="logo" class="imagelogo" src="/img/logo_presto.png" alt="logo del sito">
         </a>
         <!-- Bottone per il toggle della navbar su dispositivi mobili -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
