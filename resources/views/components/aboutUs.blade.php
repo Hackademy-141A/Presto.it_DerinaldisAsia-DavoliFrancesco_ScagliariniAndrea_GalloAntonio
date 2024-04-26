@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12 mt-2">
-            <h2 class="text-center title animated-title">{{__('ui.team')}}</h2>
+            <h2 class="text-center title animated-title glowing-btn ">{{__('ui.team')}}</h2>
         </div>
     </div>
 </div>
@@ -13,7 +13,7 @@
                 <img class="photos img-fluid" src="/img/asia_1.jpg" alt="">
                 <div class="over-layer">
                     <div class="team-content">
-                        <h3 class="title">Asia</h3>
+                        <h3 class="title">Asia Derinaldis</h3>
                         <span class="post">web developer</span>
                         <p class="description">Front-end/Back-end</p>
                     </div>
@@ -32,7 +32,7 @@
                 <img class="photos" src="/img/francesco.jpg" alt="">
                 <div class="over-layer">
                     <div class="team-content">
-                        <h3 class="title">Francesco</h3>
+                        <h3 class="title">Francesco Ayrton Davoli</h3>
                         <span class="post">Web Developer</span>
                         <p class="description">Front-end/Back-end</p>
                     </div>
@@ -52,7 +52,7 @@
                 <img class="photos" src="/img/antonio.jpg" alt="">
                 <div class="over-layer">
                     <div class="team-content">
-                        <h3 class="title">Antonio</h3>
+                        <h3 class="title">Antonio Gallo</h3>
                         <span class="post">Web Developer</span>
                         <p class="description">Front-end</p>
                     </div>
@@ -70,7 +70,7 @@
                 <img class="photos" src="/img/andrea.jpg" alt="">
                 <div class="over-layer">
                     <div class="team-content">
-                        <h3 class="title">Andrea</h3>
+                        <h3 class="title">Andrea Scagliarini</h3>
                         <span class="post">Web Developer</span>
                         <p class="description">Back-end</p>
                     </div>
