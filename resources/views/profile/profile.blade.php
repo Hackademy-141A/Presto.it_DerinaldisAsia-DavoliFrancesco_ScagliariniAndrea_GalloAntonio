@@ -1,5 +1,5 @@
 <x-layout>
-    <h2 class="text-center display-1">Il mio profilo</h2>
+    <h2 class="text-center display-1">I miei annunci</h2>
     <div class="container">
         
         
@@ -28,7 +28,7 @@
             </div>
             @empty
             <!-- Messaggio visualizzato se non ci sono annunci -->
-            <p class="col-12">{{__('ui.Non hai ancora pubblicato niente')}}</p>
+            <p class="col-12 bg-info text-white text-bold">{{__('ui.Non hai ancora pubblicato niente')}}</p>
             @endforelse
         </div>
     </div>

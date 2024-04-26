@@ -1,11 +1,11 @@
 <x-layout>
   <!-- Intestazione dell'annuncio -->
   <h2 class="text-center"> {{ $announcement->title }}</h2>
-  
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <!-- Utilizzo di 8 colonne su dispositivi di dimensioni medie e grandi -->
-      <div class="col-12 col-md-6 mt-3">
+      <div class="col-12 col-md-12 d-flex justify-content-center">
+        
+        
         <div class="card prova">
           <!-- Carousel per le immagini dell'annuncio -->
           <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
@@ -13,9 +13,7 @@
             <div class="carousel-inner ">
               @foreach ($announcement->images as $image)
               <div class="carousel-item  @if($loop->first)active @endif">
-                
-                <img src="{{$announcement->images()->first()->getUrl(400,300)}} " class="card-img-top customcarouselimg " alt="">
-                <span class="card-text btn-warning p-1 mb-5">{{__('ui.Prezzo')}}: {{ $announcement->price }}$</span>
+                <img src="{{$announcement->images()->first()->getUrl(400,300)}}" class="img-fluid customcarouselimg " alt="">
               </div>
               
               @endforeach
@@ -45,21 +43,27 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-          <div class="card-body">
-            <!-- Informazioni sull'annuncio -->
-            <h3>Titolo: {{ $announcement->title }}</h3>
-           
-            <a class="text-decoration-none text-dark" href="{{ route('categoryShow', ['category' => $announcement->category]) }}"><p class="card-text mt-4 myanchor">{{__('ui.Categoria')}}: {{ $announcement->category->name }}</p></a>
-            <p class="card-title">{{$announcement->description}}</p>
-            <p class="card-text"> {{__('ui.Publicato')}}: {{ $announcement->created_at->format('d/m/Y') }}</p>
-            <p class="card-text"> {{__('ui.Publicato')}}: {{ $announcement->user->name }}</p>
-            <!-- Pulsanti di navigazione -->
-            {{-- <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}" class="btn mybtn">{{__('ui.Vai alle categorie')}}  --}}
-            <a href="{{ route('home') }}" class="btn btn-danger mt-2 mybtnone">{{__('ui.Torna indietro')}}</a>
+          <!-- Dettagli dell'annuncio -->
+          
+        </div>
+      </div>
+      <div class="col-8 col-md-12 mt-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body"> 
+            <h3 class="card-title text-center  rounded-pill bg-info">Titolo: {{$announcement->title}}</h3>
+            <div class="clearfix mb-2">
+              <span class="float-start">Prezzo:</span><span class="float-start badge rounded-pill bg-success">{{$announcement->price}}€</span> 
+            </div>
+            <span class="card-title mt-5">{{__('ui.Categoria')}}:</span> <span class="badge rounded-pill bg-warning mb-3 textcustom1"> <a class="text-decoration-none" href="{{ route('categoryShow', ['category' => $announcement->category]) }}">{{__('ui.'. $announcement->category->name )}}</a>
+            </span>
+            <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.</h5>
+            <p class="card-text">{{__('ui.DataDiPubblicazione')}}: {{$announcement->created_at->format('d/m/Y')}}</p>
+            <h5 class="card-title"> {{__('ui.Publicato')}} : {{ $announcement->user->name }}</h5>
+            <div class="d-grid gap-2 my-4"><a href="{{ route('announcements.index')}}"  class="btn btn-warning">{{__('ui.Torna indietro')}}</a>
+            </div> 
           </div>
         </div>
       </div>
-      <!-- La parte successiva del layout può essere aggiunta qui -->
     </div>
   </div>
 </x-layout>

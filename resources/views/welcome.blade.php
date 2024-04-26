@@ -1,40 +1,7 @@
 <x-layout>
     <x-header></x-header>
+    
    
-    <div class="container">
-        <div class="row">
-            <div class="col-12 mt-3">
-                @if (session('access.denied'))
-                <!-- Mostra un messaggio di errore se l'accesso è negato -->
-                <div class="alert alert-danger">
-                    {{ session('access.denied') }}
-                </div>
-                @endif
-                
-                @if (session('message'))
-                <!-- Mostra un messaggio di successo -->
-                <div class="alert alert-success">
-                    {{ session('message') }}
-                </div>
-                @endif
-                
-                @if (session('revisor'))
-                <!-- Mostra un messaggio di successo specifico per i revisori -->
-                <div class="alert alert-success">
-                    {{ session('revisor') }}
-                </div>
-                @endif
-                
-                @if ($errors->any())
-                <!-- Mostra tutti gli errori di validazione -->
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                @endif
                 
                 <div class="container d-flex justify-content-center">
                     <div class="row text-center">
@@ -46,7 +13,7 @@
                         @foreach ($announcements as $announcement)
                         <!-- Ciclo attraverso gli annunci -->
                         <div class="col-12 col-md-4 py-4"> <!-- Colonne per gestire il layout responsivo -->
-                           
+                            
                             <div class="card h-100 shadow-sm"> 
                                 <img src={{!$announcement->images()->get()->isEmpty() ?  $announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/800/603'}} class="card-img-top" alt="...">
                                 <div class="card-body"> 
@@ -67,16 +34,16 @@
                         @endforeach
                     </div>
                 </div>
-
-               
+                
+                
                 <x-aboutUs
                 
                 
                 
                 
                 />
-
-               
+                
+                
             </div>
         </div>
     </div>
