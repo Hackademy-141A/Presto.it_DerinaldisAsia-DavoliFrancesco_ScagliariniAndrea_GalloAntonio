@@ -275,10 +275,13 @@ footer {
 }
 
 .img-preview{
-height: 500px;
-width: 500px;
+height: 300px;
+width: 300px;
 background-repeat: no-repeat ;
-background-size:contain;
+background-size: cover;
+background-position: center;
+border-radius: 5px;
+margin-bottom: 10px;
 }
 
 .page-holder {
@@ -490,3 +493,27 @@ button {
   box-shadow: 0 0 5px #ffee10;
   text-shadow: 0 0 5px #ffee10;
 }
+
+
+.myform {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mytitle {
+ font-family:serif;
+  /* font-family: "Rubik Maps", system-ui; */
+  font-size: 35px !important;
+  font-style: normal;
+  color: rgb(0, 118, 134) ;
+   text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.879);
+  
+  
+}
+
+.price {
+  size:  150px !important;
+}
+
