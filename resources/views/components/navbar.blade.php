@@ -140,16 +140,16 @@
         
         <li class="">
             
-            <x-language lang="it"/>
+            <x-language lang="it"/> <span>Italiano</span>
             
             
         </li>
         <li class="">
-            <x-language lang="en" />
+            <x-language lang="en" /><span>English</span>
             
         </li>
         <li>
-            <x-language lang="es" />
+            <x-language lang="es" /><span>Español</span>
             
         </li>
         

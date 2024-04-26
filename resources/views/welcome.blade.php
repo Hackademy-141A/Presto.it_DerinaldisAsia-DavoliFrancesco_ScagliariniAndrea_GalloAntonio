@@ -41,7 +41,7 @@
                         
                         {{-- <h2  class="display-1 animated-title">{{__('ui.welcome')}}</h2> --}}
                         
-                        <h2 class="text-center animated-title">{{__('ui.our latest announcements')}}</h2>
+                        <h2 class="text-center animated-title glowing-btn">{{__('ui.our latest announcements')}}</h2>
                         
                         @foreach ($announcements as $announcement)
                         <!-- Ciclo attraverso gli annunci -->

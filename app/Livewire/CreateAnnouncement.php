@@ -9,6 +9,9 @@ use App\Jobs\ResizeImage;
 use Illuminate\Validation;
 use App\Models\Announcement;
 use Livewire\Attributes\Validate;
+use App\Jobs\GoogleVisionLabelImage;
+use App\Jobs\GoogleVisionSafeSearch;
+use App\Jobs\RemoveFaces;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Livewire\Features\SupportFileUploads\WithFileUploads;
@@ -85,8 +88,14 @@ class CreateAnnouncement extends Component
                 // $this->announcement->images()->create(['path'=>$image->store('images','public')]);
                 $newFileName = "announcement/{$this->announcement->id}";
                 $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
+
+                RemoveFaces::withChain([
+                new GoogleVisionSafeSearch($newImage->id),
+                new GoogleVisionLabelImage($newImage->id),
+                new ResizeImage($newImage->path, 400 , 300 ),
+
+                ])->dispatch($newImage->id);
                 
-                dispatch(new ResizeImage($newImage->path, 400 , 300 ));
                 
             }
             
