@@ -47,20 +47,21 @@
           
         </div>
       </div>
-      <div class="col-8 col-md-12 mt-3">
+      <div class="col-8 col-md-12 mt-3 text-center card-prova">
         <div class="card h-100 shadow-sm">
           <div class="card-body"> 
-            <h3 class="card-title text-center  rounded-pill bg-info">Titolo: {{$announcement->title}}</h3>
+            
             <div class="clearfix mb-2">
-              <span class="float-start">Prezzo:</span><span class="float-start badge rounded-pill bg-success">{{$announcement->price}}€</span> 
+              <span class="float-start"></span><span class="float-start badge rounded-pill bg-success">{{$announcement->price}}€</span> 
             </div>
-            <span class="card-title mt-5">{{__('ui.Categoria')}}:</span> <span class="badge rounded-pill bg-warning mb-3 textcustom1"> <a class="text-decoration-none" href="{{ route('categoryShow', ['category' => $announcement->category]) }}">{{__('ui.'. $announcement->category->name )}}</a>
+            <span class="card-title mt-5"></span> <span class="badge rounded-pill bg-warning mb-3 textcustom1">
+               <a class="text-decoration-none" href="{{ route('categoryShow', ['category' => $announcement->category]) }}">{{__('ui.'. $announcement->category->name )}}</a>
             </span>
-            <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.</h5>
-            <p class="card-text">{{__('ui.DataDiPubblicazione')}}: {{$announcement->created_at->format('d/m/Y')}}</p>
-            <h5 class="card-title"> {{__('ui.Publicato')}} : {{ $announcement->user->name }}</h5>
-            <div class="d-grid gap-2 my-4"><a href="{{ route('announcements.index')}}"  class="btn btn-warning">{{__('ui.Torna indietro')}}</a>
-            </div> 
+            <h5 class="card-title">{{$announcement->description}} </h5>
+            
+           
+            <div class="d-grid gap-2 my-4"><a href="{{ route('announcements.index')}}"  class="btn btn-warning">{{__('ui.Torna indietro')}}</a></div>
+            <p class="card-title"> {{__('ui.Publicato')}} : {{ $announcement->user->name }} in data {{$announcement->created_at->format('d/m/Y')}}</p>
           </div>
         </div>
       </div>

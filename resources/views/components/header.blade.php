@@ -57,7 +57,7 @@
             @endif
             <div class="container mb-4 py-5">
               <header class="text-center text-white py-5">
-                <h2  class="display-1 animated-title glowing-btn">{{__('ui.welcome')}}</h2>
+                <h1  class="display-1 animated-title ">{{__('ui.welcome')}}</h1>
                 <div class="col-12 d-flex justify-content-center"><x-research></x-research></div>
                 
               </header>

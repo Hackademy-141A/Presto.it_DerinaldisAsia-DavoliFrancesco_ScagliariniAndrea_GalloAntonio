@@ -20,7 +20,7 @@
                                 <h5 class="card-title px-3">{{__('ui.Publicato')}} : {{$announcement->user->name}}</h5>
                             </div>
                             <h5 class="card-title text-center"> {{__('ui.Categoria')}} : {{$announcement->category->name}}</h5>
-                            <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.</h5>
+                            
                             <p class="card-text">{{__('ui.DataDiPubblicazione')}}: {{$announcement->created_at->format('d/m/Y')}}</p>
                             <div class="d-grid gap-2 my-4"><a href="{{ route('announcements.show', compact('announcement')) }}"  class="btn btn-warning">{{__('ui.Vai al dettaglio')}}</a>
                             </div> 
