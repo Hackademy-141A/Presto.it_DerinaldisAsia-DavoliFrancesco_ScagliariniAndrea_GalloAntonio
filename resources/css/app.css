@@ -9,6 +9,7 @@
 @import './formLogin.css';
 @import './formRegister.css';
 @import './create.css';
+@import './fomannouncements.css';
 :root{--font1: 'Heebo', 
     sans-serif;
     --font2: 'Fira Sans Extra Condensed',
