@@ -1,7 +1,7 @@
 <x-layout>
     <x-header></x-header>
 
-    <div class="container">
+    <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-10"> <!-- Utilizzo delle classi bootstrap per gestire il layout -->
                 <h2 class="text-center animated-title  ">{{__('ui.our latest announcements')}}</h2>
@@ -9,10 +9,12 @@
                 <div class="row row-cols-1 row-cols-md-3 g-4 text-center"> <!-- Utilizzo delle classi bootstrap per gestire il layout delle card -->
                     @foreach ($announcements as $announcement)
                     <div class="col">
-                        <div class="card h-100 shadow-sm">
+                        <div class="card h-100 shadow-sm  ">
+                            
                             <img src="{{ !$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/800/603' }}" class="card-img-top" alt="...">
+                            
                             <div class="card-body">
-                                <h5 class="card-title text-center">{{$announcement->title}}</h5>
+                                <h5 class="card-title text-center animated-title3">{{$announcement->title}}</h5>
                                 <div class="clearfix mb-2">
                                     <span class=" badge rounded-pill bg-warning mb-3 textcustom1">{{$announcement->price}}€</span>
                                     

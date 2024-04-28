@@ -1,6 +1,6 @@
 <x-layout>
   <!-- Intestazione dell'annuncio -->
-  <h2 class="text-center"> {{ $announcement->title }}</h2>
+  
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 col-md-12 d-flex justify-content-center">
@@ -10,10 +10,12 @@
           <!-- Carousel per le immagini dell'annuncio -->
           <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
             @if($announcement->images)
-            <div class="carousel-inner ">
+            <div class="container carousel-inner ">
               @foreach ($announcement->images as $image)
               <div class="carousel-item  @if($loop->first)active @endif">
+                
                 <img src="{{$announcement->images()->first()->getUrl(400,300)}}" class="img-fluid customcarouselimg " alt="">
+                 <p class=" price badge  bg-success">{{$announcement->price}}€</p>
               </div>
               
               @endforeach
@@ -38,7 +40,7 @@
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
@@ -47,12 +49,12 @@
           
         </div>
       </div>
-      <div class="col-8 col-md-12 mt-3 text-center card-prova">
+      <div class=" container col-8 col-md-12 mt-3 text-center card-prova">
         <div class="card h-100 shadow-sm">
           <div class="card-body"> 
-            
+            <h2 class="text-center"> {{ $announcement->title }}</h2>
             <div class="clearfix mb-2">
-              <span class="float-start"></span><span class="float-start badge rounded-pill bg-success">{{$announcement->price}}€</span> 
+            
             </div>
             <span class="card-title mt-5"></span> <span class="badge rounded-pill bg-warning mb-3 textcustom1">
                <a class="text-decoration-none" href="{{ route('categoryShow', ['category' => $announcement->category]) }}">{{__('ui.'. $announcement->category->name )}}</a>

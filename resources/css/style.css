@@ -11,7 +11,10 @@
     /* --grad1:linear-gradient(90deg, rgba(93,9,121,1) 47%, rgba(0,212,255,1) 100%); */
     ;
 
+
 }
+
+
 /* navbar */
 .mynavbar {
     background: rgb(246,182,18);
@@ -109,10 +112,6 @@ body {
 
 }
 
-/* Stile per il footer */
-footer {
-    background-color: var(--fine);
-}
 
 /* Media queries per renderlo responsive */
 
@@ -285,8 +284,9 @@ margin-bottom: 10px;
 }
 
 .page-holder {
-  margin-bottom: 20px;
-  min-height: 100vh;
+  
+  
+
 }
 
 .bg-cover {
@@ -294,16 +294,14 @@ margin-bottom: 10px;
 }
 
 .animated-title3 {
-  font-size: 30px;
-  background-image: linear-gradient(to left, #4014c4, #04454d); 
- -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-  -webkit-text-stroke-width: 4px;
-  -webkit-text-stroke-color: #ffffff; 
-  text-shadow: 4px 6px 3px rgba(0, 84, 112, 0.879);
+  font-size: 25px;
+  background-image: linear-gradient(to left, #090909, #007b4c); 
+  -webkit-background-clip : text;
+  -webkit-text-fill-color: transparent; 
+ 
+  text-shadow: 1px 1px 1px rgba(1, 109, 155, 0.879);
   background-size: cover;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
 } 
 
 .animated-title {
@@ -312,9 +310,9 @@ margin-bottom: 10px;
  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
-  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #002738b8; 
-  text-shadow: 3px 4px 2px rgba(3, 182, 241, 0.677);
+  text-shadow: 2px 3px 2px rgba(3, 153, 203, 0.91);
   background-size: cover;
   
 } 
@@ -447,12 +445,12 @@ button {
 }
 
 .imgheader {
-  margin-top: 80px;
+  margin-top: -35px;
 }
 
 .customfooter:hover{
   border-bottom: white 2px solid;
-  margin-bottom: 5px;
+  margin-bottom: 500px;
   background-color: #ffeb3b; 
   color: black !important;
   
@@ -520,13 +518,19 @@ button {
 
 .textcustom1{
 font-size: large;
+color: #000000;
 
 
 
 }
 
-.card-prova{
-  width: 400px;
-  height: 300px;
-  justify-content: center;
+
+
+.description{
+  background-color: #64cefc15;
+  font-style: oblique;
+  color: #000000;
+  font-weight: bold;
+ 
+  
 }

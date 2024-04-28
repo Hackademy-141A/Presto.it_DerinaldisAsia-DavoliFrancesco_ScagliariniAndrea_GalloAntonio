@@ -20,7 +20,7 @@
         <x-research></x-research>
       </div>
     </div> --}}
-    <div style="background: url(/img/sfondo.jpg)" class="page-holder bg-cover imgheader">
+    <div style="background: url(/img/sfondo.jpg)" class="page-holder bg-cover imgheader ">
       <div class="container">
         <div class="row">
           <div class="col-12">
