@@ -1,10 +1,12 @@
 <x-layout>
-    <h2 class="animated-title text-center display-1">Il mio Profilo con i miei annunci</h2>
+    <h2 class="animated-title text-center display-1">Benvenuto {{ Auth::user()->name }}</h2>
     <div class="container d-flex justify-content-center">
         <div class="row text-center">
             <!-- Titolo e link per creare un nuovo annuncio -->
             
-            <a class="text-decoration-none"  href="{{ route('create') }}"><button class=" mt-3 "><h1>{{__('ui.Publica Nuovo Annuncio')}}</h1></button></a> 
+           
+            <h4 class="animated-title text-center display-1">I tuoi Annunci</h4> 
+            <a class="text-decoration-none "  href="{{ route('create') }}"><button class=" btn btn-warning mt-3 "><h3>{{__('ui.Publica Nuovo Annuncio')}}</h3></button></a> 
             <div class="col-12 text-center abc">
                 <div class="row">
                     <!-- Ciclo attraverso gli annunci -->
@@ -27,7 +29,7 @@
                                 </div>
                                 <div class="">
                                  <span class="badge rounded-pill bg-warning mb-3 textcustom1"></span>
-                                 <p class="description text-black">{{__('ui.Descrizione')}} <br> {{ $announcement->description }}</p>
+                                 <p class="description text-black">{{__('ui.Descrizione')}}: <br> {{ $announcement->description }}</p>
                                 </div>
                                
                             </div>
