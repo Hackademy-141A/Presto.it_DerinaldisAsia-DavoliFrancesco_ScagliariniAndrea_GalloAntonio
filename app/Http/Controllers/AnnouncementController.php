@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Announcement;
+use App\Models\Category;
+use App\Models\Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AnnouncementController extends Controller
 {
@@ -21,4 +24,24 @@ class AnnouncementController extends Controller
         
         return view('annunci.index',compact('announcements'));
     }
+
+
+
+   
+
+
+    public function destroy(Announcement $announcement)
+    {
+       
+        
+        Storage::delete(Image::class);
+        $announcement->category()->dissociate();
+        $announcement->delete();
+
+        return redirect(route('home'))->with('message', 'Annuncio eliminato con successo');
+    }
+
+    
+
+    
 }

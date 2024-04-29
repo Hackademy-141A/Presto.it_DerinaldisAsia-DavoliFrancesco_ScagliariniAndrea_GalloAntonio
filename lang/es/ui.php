@@ -117,4 +117,6 @@ return [
     'Digita qui per la ricerca' => 'Escriba aquí para buscar',
 
     'lavora con noi' => 'trabaja con nosotros',
+
+    'Immagine' => 'Foto',
 ];
