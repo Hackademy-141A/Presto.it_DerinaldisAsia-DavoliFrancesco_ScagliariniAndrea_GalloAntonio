@@ -1,6 +1,5 @@
 <x-layout>
 
-
     <div>
         <!-- Contenitore fluido per adattarsi a diverse dimensioni di schermo -->
         <div class="container-fluid">
@@ -17,24 +16,26 @@
 
     @if ($announcement_to_check)
         <!-- Se ci sono annunci da controllare, mostra il carousel e i pulsanti di accettazione e rifiuto -->
-        <div class="container">
+        <div class="container ">
             <div class="row justify-content-center">
-                <div class=" col-md-4  mt-3">
+                <div class="col-md-4  mt-3  ">
                     <!-- Carousel per visualizzare le immagini degli annunci -->
+
                     <div class="card mb-4 text-center">
                         <!-- Carousel per le immagini dell'annuncio -->
-                        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                        <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
                             @if ($announcement_to_check->images)
-                                <div class="carousel-inner">
+                                <div class="carousel-inner ">
                                     @foreach ($announcement_to_check->images as $image)
                                         <div class="carousel-item  @if ($loop->first) active @endif">
                                             <img src="{{ $announcement_to_check->images()->first()->getUrl(400, 300) }}"
-                                                class="img-fluid customcarouselimg" alt="">
+                                                class="img-fluid customcarouselimg " alt="">
                                         </div>
                                     @endforeach
                                 </div>
                             @else
                                 <div class="carousel-inner">
+
                                     <div class="carousel-item active">
                                         <img src="https://picsum.photos/800/601" class="d-block w-100" alt="...">
                                     </div>
@@ -45,6 +46,7 @@
                                         <img src="https://picsum.photos/800/603" class="d-block w-100" alt="...">
                                     </div>
                                 </div>
+
                             @endif
 
                             <button class="carousel-control-prev" type="button"
@@ -58,12 +60,11 @@
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-
-
                         <!-- Dettagli dell'annuncio -->
-                        <h3 class="card-title text-center animated-title3 mt-1">{{ $announcement_to_check->title }}</h3>
+                        <h3 class="card-title text-center animated-title3 mt-1"> {{ $announcement_to_check->title }}
+                        </h3>
                         <div>
-                            <span class="card-title"></span> <span class="badge rounded-pill bg-info mb-3 textcustom1">
+                            <span class="card-title "></span> <span class="badge rounded-pill bg-info mb-3 textcustom1">
                                 <a class="text-decoration-none text-black"
                                     href="{{ route('categoryShow', ['category' => $announcement_to_check->category]) }}">{{ __('ui.' . $announcement_to_check->category->name) }}</a>
                             </span>
@@ -73,12 +74,11 @@
                             <p class="description text-black">{{ __('ui.Descrizione') }} <br>
                                 {{ $announcement_to_check->description }}</p>
                         </div>
-                        <h6 class="d-flex justify-content-center">{{ __('ui.Publicato') }}:
-                            {{ $announcement_to_check->user->name }}
+                        <h6 class="d-flex justify-content-center ">
+                            {{ __('ui.Publicato') }}:{{ $announcement_to_check->name }}
                             {{ $announcement_to_check->created_at->format('d/m/Y') }}</h6>
                     </div>
                 </div>
-
                 <div class=" col-md-4 mt-3">
                     <div class="card mb-4">
                         <div class="card-body">
@@ -100,33 +100,34 @@
                             <p>Contenuto Ammiccante: <span class="{{ $image->racy }}"></span></p>
                         </div>
                     </div>
-
-
                 </div>
             </div>
+                <div class="container">
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-md-1 text-center buttonone">
+                            <!-- Form per accettare l'annuncio -->
+                            <form action="{{ route('revisor.accept', ['announcement' => $announcement_to_check]) }}"
+                                method="POST">
+                                @csrf
+                                @method('PATCH')
+                                <button type="submit" class="btn btn-success shadow">{{ __('ui.Accetta') }} </button>
+                            </form>
+                        </div>
+                        <div class="col-md-1 text-center buttontwo">
+                            <!-- Form per rifiutare l'annuncio -->
+                            <form action="{{ route('revisor.reject', ['announcement' => $announcement_to_check]) }}"
+                                method="POST">
+                                @csrf
+                                @method('PATCH')
+                                <button type="submit" class="btn btn-danger shadow"> {{ __('ui.Rifiuta') }}</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
 
-        </div>
+
+            
     @endif
-    <div class="container">
-        <div class="row mt-3 justify-content-center">
-            <div class="col-auto d-flex">
-                <!-- Form per accettare l'annuncio -->
-                <form action="{{ route('revisor.accept', ['announcement' => $announcement_to_check]) }}" method="POST">
-                    @csrf
-                    @method('PATCH')
-                    <button type="submit" class="btn btn-success shadow mt-2">{{__('ui.Accetta') }}</button>
-                </form>
-
-                <!-- Form per rifiutare l'annuncio -->
-                <form action="{{ route('revisor.reject', ['announcement' => $announcement_to_check]) }}" method="POST">
-                    @csrf
-                    @method('PATCH')
-                    <button type="submit" class="btn btn-danger shadow mt-2 mx-2">{{__('ui.Rifiuta') }}</button>
-                </form>
-            </div>
-        </div>
-
-    </div>
 
 
 </x-layout>
