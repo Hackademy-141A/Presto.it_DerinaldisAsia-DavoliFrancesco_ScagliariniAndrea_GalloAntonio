@@ -21,20 +21,20 @@
                                     
                                 </div>
                                 <div>
-                                  <span class="card-title "></span> <span class="badge rounded-pill bg-info mb-3 textcustom1">
-                                    <a class="text-decoration-none text-black" href="{{ route('categoryShow', ['category' => $announcement->category]) }}">{{__('ui.'. $announcement->category->name )}}</a>
-                                  </span>
+                                    <span class="card-title "></span> <span class="badge rounded-pill bg-info mb-3 textcustom1">
+                                        <a class="text-decoration-none text-black" href="{{ route('categoryShow', ['category' => $announcement->category]) }}">{{__('ui.'. $announcement->category->name )}}</a>
+                                    </span>
                                 </div>
                                 <div class="">
-                                 <span class="badge rounded-pill bg-warning mb-3 textcustom1"></span>
-                                 <p class="description text-black">{{__('ui.Descrizione')}} <br> {{ $announcement->description }}</p>
+                                    <span class="badge rounded-pill bg-warning mb-3 textcustom1"></span>
+                                    <p class="description text-black">{{__('ui.Descrizione')}} <br> {{ $announcement->description }}</p>
                                 </div>
-                               
+                                
                             </div>
                             <h6 class="d-flex justify-content-center  "> {{__('ui.Publicato')}} : {{ $announcement->user->name }}  {{$announcement->created_at->format('d/m/Y')}}</h6>
                         </div> 
                     </div>
-                     
+                    
                     @empty
                     <!-- Nessun annuncio trovato -->
                     <div class="col-12">
@@ -50,4 +50,3 @@
     </div>
     
 </x-layout>
- 

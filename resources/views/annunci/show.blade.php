@@ -15,7 +15,7 @@
               <div class="carousel-item  @if($loop->first)active @endif">
                 
                 <img src="{{$announcement->images()->first()->getUrl(400,300)}}" class="img-fluid customcarouselimg " alt="">
-                 <p class=" price badge  bg-success">{{$announcement->price}}€</p>
+                <p class=" price badge  bg-success">{{$announcement->price}}€</p>
               </div>
               
               @endforeach
@@ -54,14 +54,14 @@
           <div class="card-body"> 
             <h2 class="text-center"> {{ $announcement->title }}</h2>
             <div class="clearfix mb-2">
-            
+              
             </div>
             <span class="card-title mt-5"></span> <span class="badge rounded-pill bg-warning mb-3 textcustom1">
-               <a class="text-decoration-none" href="{{ route('categoryShow', ['category' => $announcement->category]) }}">{{__('ui.'. $announcement->category->name )}}</a>
+              <a class="text-decoration-none" href="{{ route('categoryShow', ['category' => $announcement->category]) }}">{{__('ui.'. $announcement->category->name )}}</a>
             </span>
             <h5 class="card-title">{{$announcement->description}} </h5>
             
-           
+            
             <div class="d-grid gap-2 my-4"><a href="{{ route('announcements.index')}}"  class="btn btn-warning">{{__('ui.Torna indietro')}}</a></div>
             <p class="card-title"> {{__('ui.Publicato')}} : {{ $announcement->user->name }} in data {{$announcement->created_at->format('d/m/Y')}}</p>
           </div>
