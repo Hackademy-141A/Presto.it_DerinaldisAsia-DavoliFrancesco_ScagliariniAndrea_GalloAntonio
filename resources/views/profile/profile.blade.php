@@ -1,36 +1,53 @@
 <x-layout>
-    <h2 class="text-center display-1">I miei annunci</h2>
-    <div class="container">
-        
-        
-        <div class="row">
-            @forelse ($announcements as $announcement)
-            <div class="col-12 col-md-6 col-lg-4 my-2">
-                <!-- Card per ogni annuncio -->
-                <div class="card">
-                    <!-- Immagine dell'annuncio (utilizza una dimensione fissa per migliorare le prestazioni del caricamento della pagina) -->
-                    <img src="{{!$announcement->images()->get()->isEmpty() ?  $announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/800/603'}}" class="card-img-top" alt="Placeholder">
-                    <div class="card-body">
-                        <!-- Titolo dell'annuncio -->
-                        <h5 class="card-title">{{__('ui.Titolo')}}: {{ $announcement->title }}</h5>
-                        <!-- Prezzo dell'annuncio -->
-                        <p class="card-text">{{__('ui.Prezzo')}}:{{ $announcement->price }}$</p>
-                        <!-- Descrizione dell'annuncio -->
-                        <p class="card-text">{{__('ui.Descrizione')}}: {{ $announcement->description }}</p>
-                        <!-- Data di pubblicazione dell'annuncio -->
-                        <p class="card-text">{{__('ui.DataDiPubblicazione')}}: {{ $announcement->created_at->format('d/m/Y') }}</p>
-                        <!-- Nome dell'utente che ha pubblicato l'annuncio -->
-                        <p class="card-text">{{__('ui.Publicato')}}: {{ $announcement->user->name }}</p>
-                        <!-- Link per visualizzare i dettagli dell'annuncio -->
-                        <a href="{{ route('announcements.show', compact('announcement')) }}" class="btn btn-danger">{{__('ui.Vai al dettaglio')}}</a>
+    <h2 class="animated-title text-center display-1">Il mio Profilo con i miei annunci</h2>
+    <div class="container d-flex justify-content-center">
+        <div class="row text-center">
+            <!-- Titolo e link per creare un nuovo annuncio -->
+            
+            <a class="text-decoration-none"  href="{{ route('create') }}"><button class=" mt-3 "><h1>{{__('ui.Publica Nuovo Annuncio')}}</h1></button></a> 
+            <div class="col-12 text-center abc">
+                <div class="row">
+                    <!-- Ciclo attraverso gli annunci -->
+                    @forelse ($announcements as $announcement)
+                    <div class="col-12 col-md-4 py-4"> <!-- Colonne per gestire il layout responsivo -->
+                        <div class="card h-100 shadow-sm  ">
+                            
+                            <img src="{{ !$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/800/603' }}" class="card-img-top" alt="...">
+                            
+                            <div class="card-body">
+                                <h6 class="card-title text-center animated-title3 ">{{$announcement->title}}</h6>
+                                <div class="clearfix mb-2">
+                                    <span class=" badge rounded-pill bg-warning mb-3 textcustom1">{{$announcement->price}}€</span>
+                                    
+                                </div>
+                                <div>
+                                  <span class="card-title "></span> <span class="badge rounded-pill bg-info mb-3 textcustom1">
+                                    <a class="text-decoration-none text-black" href="{{ route('categoryShow', ['category' => $announcement->category]) }}">{{__('ui.'. $announcement->category->name )}}</a>
+                                  </span>
+                                </div>
+                                <div class="">
+                                 <span class="badge rounded-pill bg-warning mb-3 textcustom1"></span>
+                                 <p class="description text-black">{{__('ui.Descrizione')}} <br> {{ $announcement->description }}</p>
+                                </div>
+                               
+                            </div>
+                            <h6 class="d-flex justify-content-center  "> {{__('ui.Publicato')}} : {{ $announcement->user->name }}  {{$announcement->created_at->format('d/m/Y')}}</h6>
+                        </div> 
                     </div>
+                     
+                    @empty
+                    <!-- Nessun annuncio trovato -->
+                    <div class="col-12">
+                        <div class="alert alert-warning py-3 shadow">    
+                            <p>{{__('ui.Non abbiamo trovato annunci per questa ricerca')}}</p>
+                        </div>
+                    </div>
+                    @endforelse
+                    
                 </div>
             </div>
-            @empty
-            <!-- Messaggio visualizzato se non ci sono annunci -->
-            <p class="col-12 bg-info text-white text-bold">{{__('ui.Non hai ancora pubblicato niente')}}</p>
-            @endforelse
         </div>
     </div>
     
 </x-layout>
+ 

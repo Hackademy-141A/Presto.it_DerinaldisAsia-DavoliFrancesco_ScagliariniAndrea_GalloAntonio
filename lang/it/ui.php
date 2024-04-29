@@ -34,7 +34,7 @@ return [
     'Annunci' =>  'Annunci',
 
 
-    'DataDiPubblicazione' =>  'Data di Publicazione',
+    'DataDiPubblicazione' =>  'Data di Pubblicazione',
 
     'Vai al dettaglio' => 'Vai al dettaglio',
 
@@ -56,7 +56,7 @@ return [
 
     'Ricerca' => 'Ricerca',
     
-    'our latest announcements' =>  'i nostri ultimi annunci',
+    'our latest announcements' =>  'Ultimi annunci',
 
     'team' => 'chi siamo',
 
@@ -70,7 +70,7 @@ return [
 
     'Da Revisionare' => 'Da Revisionare',
 
-    'Publicato' => 'Publicato da',
+    'Publicato' => 'Pubblicato da',
 
     'Descrizione' => 'Descrizione',
 
@@ -78,7 +78,7 @@ return [
 
     'Annunci da revisionare' => 'Annunci da revisionare',
 
-    'Publica Nuovo Annuncio' => 'Publica Nuovo Annuncio',
+    'Publica Nuovo Annuncio' => 'Pubblica Nuovo Annuncio',
 
     'Inserisci la tua email' => 'Inserisci la tua email',
 

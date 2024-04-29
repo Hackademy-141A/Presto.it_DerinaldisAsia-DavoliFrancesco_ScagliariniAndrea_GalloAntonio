@@ -1,8 +1,8 @@
 
-<div class="container">
+<div class="container mt-5">
     <div class="row">
         <div class="col-12 mt-2">
-            <h2 class="text-center title animated-title glowing-btn ">{{__('ui.team')}}</h2>
+            <h2 class="text-center title animated-title mt-5 ">TEAM</h2>
         </div>
     </div>
 </div>

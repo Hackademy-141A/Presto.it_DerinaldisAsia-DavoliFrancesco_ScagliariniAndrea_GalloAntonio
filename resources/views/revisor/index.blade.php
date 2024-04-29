@@ -20,7 +20,7 @@
             <div class="col-12 mx-3 mt-4 d-flex justify-content-center">
                 <!-- Carousel per visualizzare le immagini degli annunci -->
                 
-                <div class="card prova">
+                <div class="card prova text-center">
                     <!-- Carousel per le immagini dell'annuncio -->
                     <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
                         @if($announcement_to_check->images)
@@ -57,11 +57,18 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                    <!-- Dettagli dell'annuncio -->
-                    <h5 class="text-dark mx-5 mt-2 text-center">{{__('ui.Titolo')}}: {{$announcement_to_check->title}}</h5>
-                    <p class="card-text text-dark mx-3">{{__('ui.Publicato')}} : {{$announcement_to_check->name}}</p>
-                    <p class="card-text text-dark mx-3">{{__('ui.Descrizione')}} : {{$announcement_to_check->description}}</p>
-                    <p class="text-dark mx-3">{{__('ui.Data di creazione')}} : {{$announcement_to_check->created_at->format('d/m/Y')}}</p>
+                    <!-- Dettagli dell'annuncio -->                    
+                    <h3 class="card-title text-center animated-title3 mt-1"> {{$announcement_to_check->title}}</h3>
+                    <div>
+                        <span class="card-title "></span> <span class="badge rounded-pill bg-info mb-3 textcustom1">
+                          <a class="text-decoration-none text-black" href="{{ route('categoryShow', ['category' => $announcement_to_check->category]) }}">{{__('ui.'. $announcement_to_check->category->name )}}</a>
+                        </span>
+                      </div>
+                    
+                    <div>                    
+                       <p class="description text-black">{{__('ui.Descrizione')}} <br> {{$announcement_to_check->description}}</p>
+                    </div>
+                    <h6 class="d-flex justify-content-center ">{{__('ui.Publicato')}}:{{$announcement_to_check->name}} {{$announcement_to_check->created_at->format('d/m/Y')}}</h6>
                 </div>
             </div>
             

@@ -6,3 +6,13 @@ width: 500px;
 
 
 }
+.price {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
