@@ -59,7 +59,7 @@
                             </div> 
                             
                         </div>
-                        <a class="text-decoration-none "  href="{{ route('create') }}"><button class=" btn btn-warning mt-3 "><h3>{{__('ui.Publica Nuovo Annuncio')}}</h3></button></a> 
+                        
                         @empty
                         <!-- Nessun annuncio trovato -->
                         <div class="col-12">
@@ -68,6 +68,7 @@
                             </div>
                         </div>
                         @endforelse
+                        <a class="text-decoration-none "  href="{{ route('create') }}"><button class=" btn btn-warning mt-3 "><h3>{{__('ui.Publica Nuovo Annuncio')}}</h3></button></a> 
                         
                     </div>
                 </div>
