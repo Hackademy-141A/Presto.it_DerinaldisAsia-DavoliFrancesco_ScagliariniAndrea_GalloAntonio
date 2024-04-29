@@ -16,35 +16,36 @@
             <!-- Colonna che occupa 8 su 12 colonne su schermi medi e grandi -->
             <div class="text-center col-md-8">
                 <!-- Form per l'invio dei dati -->
-                <form class="card bg-warning" wire:submit='store' enctype="multipart/form-data">
+                <form class="formAnnouncement" wire:submit='store' enctype="multipart/form-data">
                     <!-- Campo Titolo -->
+                    <h2>{{__('ui.Nuovo annuncio')}} </h2>
                     <div class="mb-3">
-                        <label for="title " class="form-label"><h4>{{__('ui.Titolo')}}</h4></label>
-                        <input wire:model.live='title' type="text" class="form-control shadow @error('title') is-invalid @enderror" id="title">
+                        <label class="mylabel" for="title " class="form-label"><h4>{{__('ui.Titolo')}}</h4></label>
+                        <input  class="myinput" wire:model.live='title' type="text" class="form-control shadow @error('title') is-invalid @enderror" id="title">
                         @error('title')
                         <div class="text-danger"> {{ $message }} </div>
                         @enderror
                     </div>
                     <!-- Campo Prezzo -->
                     <div class="mb-3">
-                        <label for="price" class="form-label"><h4>{{__('ui.Prezzo')}}</h4></label>
-                        <input wire:model.live='price' type="number" class="form-control shadow @error('price') is-invalid @enderror" id="price">
+                        <label class="mylabel" for="price" class="form-label"><h4>{{__('ui.Prezzo')}}</h4></label>
+                        <input  class="myinput"  wire:model.live='price' type="number" class="form-control shadow @error('price') is-invalid @enderror" id="price">
                         @error('price')
                         <div class="text-danger"> {{ $message }} </div>
                         @enderror
                     </div>
                     <!-- Campo Descrizione -->
                     <div class="mb-3">
-                        <label for="description" class="form-label "><h4>{{__('ui.Descrizione')}}</h4></label>
-                        <textarea wire:model.live='description' class="form-control shadow @error('description') is-invalid @enderror" id="description" cols="50" rows="10" style="height: 100px"></textarea>
+                        <label class="mylabel" for="description" class="form-label "><h4>{{__('ui.Descrizione')}}</h4></label>
+                        <textarea  class="myinput"  wire:model.live='description' class="form-control shadow @error('description') is-invalid @enderror" id="description" cols="50" rows="10" style="height: 100px"></textarea>
                         @error('description')
                         <div class="text-danger"> {{ $message }} </div>
                         @enderror
                     </div>
                     <!-- Campo Categoria -->
                     <div class="mb-3">
-                        <label for="category"><h4>{{__('ui.Categoria')}}</h4></label>
-                        <select wire:model.defer="category" id="category" class="form-control shadow">
+                        <label class="mylabel" for="category"><h4>{{__('ui.Categoria')}}</h4></label>
+                        <select  class="myinput"  wire:model.defer="category" id="category" class="form-control shadow">
                             <option value="">{{__('ui.Scegli la categoria')}}</option>
                             @foreach($categories as $category)
                             <option value="{{$category->id}}">{{$category->name}}</option>
@@ -53,7 +54,7 @@
                     </div>
                     <div class="mb-3">
                         <div class="mb-3">
-                            <input wire:model="temporary_images" name="images" multiple
+                            <input  class="myinput"  wire:model="temporary_images" name="images" multiple
                             class="form-control shadow @error('temporary_images.*')is-invalid
                             @enderror"
                             type="file" placeholder="Img" />
@@ -83,10 +84,9 @@
                         </div>
                         @endif
                         <!-- Bottone di invio -->
-                        <button type="submit" class="btn btn-primary"><h3>{{__('ui.Invia')}}</h3></button>
+                        <button type="submit" class="mybottone btn btn-primary"><h3>{{__('ui.Invia')}}</h3></button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    
