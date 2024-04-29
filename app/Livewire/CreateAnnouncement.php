@@ -48,16 +48,16 @@ class CreateAnnouncement extends Component
     
     protected $rules = [
         
-        'images.*' => 'image|max:1024',
-        'temporary_images.*' => 'image|max:1024'
+        'images.*' => 'image|max:2048',
+        'temporary_images.*' => 'image|max:2048'
     ];
     
     protected $messages = [
         
-        'images.max' => "l'immagine deve essere massimo di 1MB",
+        'images.max' => "l'immagine deve essere massimo di 2MB",
         'temporary_images.*.required' => "L' immagine è richiesta",
         'temporary_images.*.image' => "i file devono essere immagini",
-        'temporary_images.*.max' => "l'immagine deve essere massimo di 1MB",
+        'temporary_images.*.max' => "l'immagine deve essere massimo di 2MB",
     ];
     
     
@@ -126,7 +126,7 @@ class CreateAnnouncement extends Component
     {
         if(
             $this->validate([
-                'temporary_images.*' => 'image|max:2000',
+                'temporary_images.*' => 'image|max:2048',
                 ])
                 ){
                     foreach ($this->temporary_images as $image) {
