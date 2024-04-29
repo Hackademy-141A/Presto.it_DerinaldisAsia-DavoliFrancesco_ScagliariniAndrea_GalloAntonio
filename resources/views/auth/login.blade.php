@@ -3,11 +3,8 @@
         <div class="row justify-content-center text-center">
             <div class="col-sm-10 col-md-8 col-lg-6 mt-5"> <!-- Utilizzate le classi col-sm-10 per dispositivi piccoli, col-md-8 per dispositivi medi e col-lg-6 per dispositivi grandi -->
                 <!-- Verifica degli errori di validazione -->
-<<<<<<< HEAD
                 
                 
-=======
->>>>>>> 7d3917bf8cd1a77ad17ce52c0cf80ed9cc3fb7a0
                 <form class="formLogin mt-5" method="POST" action="{{ route('login') }}">
                     @csrf <!-- Protezione CSRF -->
                     <h2>{{__('ui.Accedi')}} </h2>
@@ -23,14 +20,10 @@
                         <input type="checkbox" class="form-check-input" id="showPasswordCheckbox">
                         <label class="form-check-label" for="showPasswordCheckbox">Mostra Password</label>                        
                     </div>
-<<<<<<< HEAD
-                    
-                    <input type="checkbox" id="showPasswordCheckbox">
-                    <label for="showPasswordCheckbox">Mostra Password</label>                        
                     
                     
-=======
->>>>>>> 7d3917bf8cd1a77ad17ce52c0cf80ed9cc3fb7a0
+                    
+                    
                     <!-- Pulsante di accesso -->
                     <button type="submit" class="btn mybottone btn-warning mt-3">{{__('ui.Accedi')}}</button>
                     <div class="mt-3">
@@ -40,20 +33,20 @@
             </div> <!-- Fine colonna -->
         </div>
     </div>
-     <!-- Fine riga -->
-    </div>
-    
-    
-    <script>
-        document.getElementById("showPasswordCheckbox").addEventListener("change", function() {
-            var passwordField = document.getElementById("passwordField");
-            if (passwordField.type === "password") {
-                passwordField.type = "text";
-            } else {
-                passwordField.type = "password";
-            }
-        });
-    </script>
-    
-    
+    <!-- Fine riga -->
+</div>
+
+
+<script>
+    document.getElementById("showPasswordCheckbox").addEventListener("change", function() {
+        var passwordField = document.getElementById("passwordField");
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+        } else {
+            passwordField.type = "password";
+        }
+    });
+</script>
+
+
 </x-layout>
