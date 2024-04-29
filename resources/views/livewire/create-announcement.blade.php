@@ -52,9 +52,11 @@
                             @endforeach
                         </select>
                     </div>
+
                     <div class="mb-3">
                         <div class="mb-3">
-                            <input  class="myinput"  wire:model="temporary_images" name="images" multiple
+                            <label  class="mylabel" for="img"><h4>{{__('ui.Immagine')}}</h4></label>
+                            <input  class="form-control"  wire:model="temporary_images" name="images" multiple
                             class="form-control shadow @error('temporary_images.*')is-invalid
                             @enderror"
                             type="file" placeholder="Img" />

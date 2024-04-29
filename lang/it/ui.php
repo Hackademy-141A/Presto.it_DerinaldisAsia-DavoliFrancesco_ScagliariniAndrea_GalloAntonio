@@ -117,4 +117,6 @@ return [
 
     'lavora con noi' => 'Lavora con noi',
 
+    'Immagine' => 'Immagine',
+
 ];
